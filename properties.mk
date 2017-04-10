@@ -255,6 +255,10 @@ media.stagefright.audio.deep=false
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.dualmic.config=endfire \
     ro.config.vc_call_vol_steps=8
+
+# stereo speakers: orientation changes swap L/R channels
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.audio.monitorRotation=true
 # }}}
 
 # Bluetooth {{{
