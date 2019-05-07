@@ -58,20 +58,6 @@ PRODUCT_PACKAGES += \
     SettingsResMotoKona
 
 # A/B
-AB_OTA_UPDATER := true
-
-AB_OTA_PARTITIONS += \
-    boot \
-    vendor_boot \
-    dtbo \
-    odm \
-    product \
-    system \
-    system_ext \
-    vendor \
-    vbmeta \
-    vbmeta_system
-
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
