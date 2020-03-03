@@ -17,9 +17,6 @@
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# Installs gsi keys into ramdisk, to boot a GSI with verified boot.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
-
 BOARD_SHIPPING_API_LEVEL := 30
 BOARD_API_LEVEL := 30
 PRODUCT_SHIPPING_API_LEVEL := 30
