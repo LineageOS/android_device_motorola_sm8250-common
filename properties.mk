@@ -493,6 +493,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.mot.build.customerid=retcn \
     ro.vendor.mot.factory=false
+
+# Enable zygote critical window.
+PRODUCT_PROPERTY_OVERRIDES += \
+    zygote.critical_window.minute=10
 # }}}
 
 # vim:fdm=marker
