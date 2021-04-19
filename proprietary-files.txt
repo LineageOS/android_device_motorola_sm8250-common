@@ -468,14 +468,6 @@ vendor/etc/vhw.xml
 # Perf
 vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
-vendor/lib64/libqti-util.so
-
-# Perf-IOP
-vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
-vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
-vendor/lib64/libqti-iopd-client.so
-vendor/lib64/libqti-iopd.so
-vendor/lib64/vendor.qti.hardware.iop@2.0.so
 
 # Perf - QSPM
 vendor/bin/vendor.qti.qspmhal@1.0-service

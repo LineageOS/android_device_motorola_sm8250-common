@@ -558,6 +558,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </hal>
     -->
     <!-- IOP HAL service -->
+    <!--
     <hal format="hidl">
         <name>vendor.qti.hardware.iop</name>
         <transport>hwbinder</transport>
@@ -567,6 +568,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    -->
     <!-- bluetooth -->
     <hal format="hidl">
         <name>android.hardware.bluetooth</name>
