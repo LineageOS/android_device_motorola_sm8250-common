@@ -289,7 +289,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
-
     <!-- RIL AUDIO HAL -->
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.am</name>
@@ -480,7 +479,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
       <name>android.hardware.tetheroffload.config</name>
       <transport>hwbinder</transport>
-      <version>1.0</version>
+      <version>1.1</version>
       <interface>
           <name>IOffloadConfig</name>
           <instance>default</instance>
