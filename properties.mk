@@ -440,6 +440,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Disable OMX
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.media.omx=0
+
+# Media Performance Class 11
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.odm.build.media_performance_class=30
 # }}}
 
 # Perf {{{
