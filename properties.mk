@@ -407,6 +407,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # }}}
 
 # IMS {{{
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.qcom.ims.use_moto_vt_ext=true
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.ims.playout_delay=50 \
     persist.vendor.ims.cam_sensor_delay=20 \
