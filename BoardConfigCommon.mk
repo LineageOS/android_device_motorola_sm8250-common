@@ -68,6 +68,8 @@ TARGET_KERNEL_CONFIG := \
     vendor/kona-perf_defconfig \
     vendor/ext_config/moto-kona.config
 TARGET_KERNEL_SOURCE := kernel/motorola/sm8250
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load.recovery))
+BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)
 
 # Kernel modules - Audio
 TARGET_MODULE_ALIASES += \
