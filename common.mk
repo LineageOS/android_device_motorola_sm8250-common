@@ -266,10 +266,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/uinput-egis.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-egis.kl \
     $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl
 
-# For config.fs
-PRODUCT_PACKAGES += \
-    fs_config_files
-
 # Fwk-detect
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
