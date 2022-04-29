@@ -16,7 +16,7 @@
 
 
 cc_library {
-    name: "librecovery_updater.nio",
+    name: "librecovery_updater.moto_kona",
     vendor: true,
     recovery_available: true,
     shared_libs: [

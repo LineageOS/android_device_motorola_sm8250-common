@@ -19,7 +19,7 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 BOARD_VENDOR := motorola
 
-DEVICE_PATH := device/motorola/nio
+COMMON_PATH := device/motorola/sm8250-common
 
 # Architecture
 TARGET_ARCH := arm64
@@ -37,7 +37,6 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a76
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := nio
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
@@ -51,12 +50,9 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := \
     DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc \
     LLVM=1
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CONFIG := vendor/lineageos_nio_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/sm8250
 TARGET_KERNEL_VERSION := 4.19
 TARGET_KERNEL_CLANG_COMPILE := true
-#KERNEL_TOOLCHAIN := $(PWD)/prebuilts/gcc/linux-x86/aarch64/arm64-gcc/bin
-#TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-elf-
 
 # Kernel modules - Audio
 TARGET_MODULE_ALIASES += \
@@ -110,7 +106,7 @@ USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
 TARGET_USE_QTI_BT_STACK := true
 
 # Dex
@@ -131,21 +127,21 @@ TARGET_ENABLE_MEDIADRM_64 := true
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := \
-    $(DEVICE_PATH)/config.fs \
-    $(DEVICE_PATH)/mot_aids.fs
+    $(COMMON_PATH)/config.fs \
+    $(COMMON_PATH)/mot_aids.fs
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 LOC_HIDL_VERSION := 4.0
 
 # HIDL
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/vendor_framework_compatibility_matrix.xml
-DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(COMMON_PATH)/vendor_framework_compatibility_matrix.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE := $(COMMON_PATH)/framework_manifest.xml
+DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_nio
+TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_moto_kona
 
 # Media
 TARGET_USES_ION := true
@@ -196,11 +192,14 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USES_INTERACTION_BOOST := true
 TARGET_TAP_TO_WAKE_NODE := "/sys/class/touchscreen/NVT-ts/double_click"
 
+# Properties
+TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
+
 # Recovery
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
@@ -211,9 +210,9 @@ VENDOR_SECURITY_PATCH := 2022-06-01
 # SELinux
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
-BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
-PRODUCT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
+PRODUCT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 
 # Android Verified Boot
 BOARD_AVB_ENABLE := true
@@ -240,4 +239,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
-include vendor/motorola/nio/BoardConfigVendor.mk
+-include vendor/motorola/sm8250-common/BoardConfigVendor.mk
