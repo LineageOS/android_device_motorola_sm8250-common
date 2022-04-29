@@ -4,6 +4,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="android.overlay.nio">
-    <overlay android:targetPackage="android" android:isStatic="true" android:priority="600"/>
+    coreApp="true"
+    package="com.android.settings.overlay.moto.kona">
+    <overlay android:targetPackage="com.android.settings" android:isStatic="true" />
 </manifest>

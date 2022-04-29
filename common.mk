@@ -57,9 +57,8 @@ PRODUCT_PACKAGES += \
     WifiResTarget
 
 PRODUCT_PACKAGES += \
-    FrameworksResNio \
-    SettingsResNio \
-    SystemUIResNio
+    FrameworksResMotoKona \
+    SettingsResMotoKona
 
 # A/B
 AB_OTA_UPDATER := true
