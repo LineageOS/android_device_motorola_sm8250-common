@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019-2020 The LineageOS Project
+# Copyright (C) 2019-2022 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,11 +20,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
-# Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/motorola/nio/nio-vendor.mk)
-
 BOARD_SHIPPING_API_LEVEL := 30
 BOARD_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 30
+
+PRODUCT_GMS_CLIENTID_BASE := android-motorola
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2520
+TARGET_SCREEN_WIDTH := 1080
+
+# Screen density
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -447,7 +455,7 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.nio
+    vendor.lineage.touch@1.0-service.moto_kona
 
 # USB HAL
 PRODUCT_PACKAGES += \
@@ -530,3 +538,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# Get non-open-source specific aspects
+$(call inherit-product, vendor/motorola/sm8250-common/sm8250-common-vendor.mk)

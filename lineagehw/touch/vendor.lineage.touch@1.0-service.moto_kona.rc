@@ -1,7 +1,7 @@
 on early-boot
    chown system system /sys/class/touchscreen/NVT-ts/single_click
 
-service touch-hal-1-0 /vendor/bin/hw/vendor.lineage.touch@1.0-service.nio
+service touch-hal-1-0 /vendor/bin/hw/vendor.lineage.touch@1.0-service.moto_kona
     class hal
     user system
     group system
