@@ -124,9 +124,6 @@ endif
 # Display
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
 
-# DRM
-TARGET_ENABLE_MEDIADRM_64 := true
-
 # Filesystem
 TARGET_FS_CONFIG_GEN := \
     $(COMMON_PATH)/config.fs \
