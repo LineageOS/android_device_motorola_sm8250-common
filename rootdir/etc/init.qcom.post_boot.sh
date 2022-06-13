@@ -5260,7 +5260,7 @@ case "$target" in
     "msmnile")
 	# cpuset parameters
 	target_varient=`getprop ro.build.product`
-        if [ "$target_varient" == "msmnile_gvmq" ]; then
+        if [ "$target_varient" == "msmnile_gvmq" ] || [ "$target_varient" == "msmnile_gvmgh" ]; then
 		echo 4-7 > /dev/cpuset/background/cpus
 		echo 4-7 > /dev/cpuset/system-background/cpus
 
