@@ -190,7 +190,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # Power
 TARGET_USES_INTERACTION_BOOST := true
-TARGET_TAP_TO_WAKE_NODE := "/sys/class/touchscreen/NVT-ts/double_click"
 
 # Properties
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
