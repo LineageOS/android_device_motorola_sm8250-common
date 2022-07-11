@@ -28,14 +28,15 @@ using ::vendor::lineage::touch::V1_0::ITouchscreenGesture;
 using ::vendor::lineage::touch::V1_0::implementation::TouchscreenGesture;
 
 int main() {
-    sp<ITouchscreenGesture> gesture_service = new TouchscreenGesture();
-
     android::hardware::configureRpcThreadpool(1, true /*callerWillJoin*/);
 
+#ifdef SINGLE_TAP_PATH
+    sp<ITouchscreenGesture> gesture_service = new TouchscreenGesture();
     if (gesture_service->registerAsService() != OK) {
         LOG(ERROR) << "Cannot register touchscreen gesture HAL service.";
         return 1;
     }
+#endif
 
     LOG(DEBUG) << "Touchscreen HAL service ready.";
 

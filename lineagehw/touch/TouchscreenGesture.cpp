@@ -29,7 +29,7 @@ struct GestureInfo {
 };
 
 constexpr GestureInfo kGestureNodes[] = {
-        {250, "Single Tap", "/sys/class/touchscreen/NVT-ts/single_click"},
+        {250, "Single Tap", SINGLE_TAP_PATH},
 };
 }  // anonymous namespace
 
