@@ -1,5 +1,6 @@
 on early-boot
    chown system system /sys/class/touchscreen/NVT-ts/single_click
+   chown system system /sys/devices/platform/soc/a94000.i2c/i2c-2/2-0049/single_click
 
 service touch-hal-1-0 /vendor/bin/hw/vendor.lineage.touch@1.0-service.moto_kona
     class hal
