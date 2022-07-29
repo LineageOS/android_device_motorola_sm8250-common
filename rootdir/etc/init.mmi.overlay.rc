@@ -2,7 +2,7 @@
 # import /vendor/etc/init/hw/init.vendor.st21nfc.rc
 on early-init
    setprop ro.vendor.device_edition ${ro.boot.edition}
-   exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules qpnp-smbcharger-mmi qpnp_adaptive_charge nova_0flash_mmi
+   exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules qpnp-smbcharger-mmi qpnp_adaptive_charge
 
 on mmi-priority
    # Only high priority MMI DLKMs loaded here
@@ -15,18 +15,7 @@ on mmi-priority
 on fs
    # Majority of MMI DLKMs should be in this group
    setprop vendor.mmi_init.stage common
-   insmod /vendor/lib/modules/wl2864c.ko
-   insmod /vendor/lib/modules/mmi_info.ko
-   insmod /vendor/lib/modules/mmi_annotate.ko
-   insmod /vendor/lib/modules/mmi_sys_temp.ko
-   insmod /vendor/lib/modules/qpnp-power-on-mmi.ko
-   insmod /vendor/lib/modules/mmi_annotate.ko
-   insmod /vendor/lib/modules/mmi_info.ko
-   insmod /vendor/lib/modules/tzlog_dump.ko
-   insmod /vendor/lib/modules/watchdog_cpu_ctx.ko
-   insmod /vendor/lib/modules/sx933x_sar.ko
-   insmod /vendor/lib/modules/stmvl53l1.ko
-   exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules aw882xx_k419.ko aw8695.ko
+   exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules aw882xx_k419 aw8695 mmi_annotate mmi_info mmi_sys_temp qpnp-power-on-mmi stmvl53l1 tzlog_dump watchdog_cpu_ctx
 
 on post-fs-data
    setprop vendor.mmi_init.stage complete
@@ -42,13 +31,8 @@ service vendor.mmi-laser-sh /vendor/bin/init.mmi.laser.sh
     user root
     oneshot
 
-
 on init
     write /sys/block/zram0/comp_algorithm lz4
-
-on early-boot
-   # gestures
-   chown system system /sys/class/touchscreen/NVT-ts/double_click
 
 on boot
    # Add for goodix fingerprint
