@@ -18,6 +18,7 @@ soong_config_module_type {
     module_type: "cc_defaults",
     config_namespace: "MOTO_KONA_TOUCH",
     value_variables: ["SINGLE_TAP_PATH"],
+    bool_variables: ["USE_TOUCH_POLLING_RATE"],
     properties: ["cppflags"],
 }
 
@@ -26,6 +27,9 @@ moto_kona_touch_hal {
     soong_config_variables: {
         SINGLE_TAP_PATH: {
             cppflags: ["-DSINGLE_TAP_PATH=\"%s\""],
+        },
+        USE_TOUCH_POLLING_RATE: {
+            cppflags: ["-DUSE_TOUCH_POLLING_RATE"],
         },
     },
 }
@@ -37,10 +41,10 @@ cc_binary {
         "hidl_defaults",
         "moto_kona_touch_hal_cc_defaults"
     ],
-    vintf_fragments: ["vendor.lineage.touch@1.0-service.moto_kona.xml"],
     relative_install_path: "hw",
     vendor: true,
     srcs: [
+        "HighTouchPollingRate.cpp",
         "TouchscreenGesture.cpp",
         "service.cpp",
     ],
