@@ -1038,6 +1038,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <name>vendor.lineage.touch</name>
         <version>1.0</version>
         <interface>
+            <name>IHighTouchPollingRate</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
             <name>ITouchscreenGesture</name>
             <instance>default</instance>
         </interface>
