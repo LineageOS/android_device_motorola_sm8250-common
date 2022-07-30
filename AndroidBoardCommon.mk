@@ -17,11 +17,10 @@
 INSTALLED_KERNEL_TARGET := $(PRODUCT_OUT)/kernel
 recovery_uncompressed_ramdisk := $(PRODUCT_OUT)/ramdisk-recovery.cpio
 
-RECOVERY_KMOD_TARGETS := \
+RECOVERY_KMOD_TARGETS += \
     aw8695.ko \
     qpnp-smbcharger-mmi.ko \
     qpnp_adaptive_charge.ko \
-    nova_0flash_mmi.ko \
     sensors_class.ko
 
 INSTALLED_RECOVERY_KMOD_TARGETS := $(RECOVERY_KMOD_TARGETS:%=$(TARGET_RECOVERY_ROOT_OUT)/lib/modules/%)
