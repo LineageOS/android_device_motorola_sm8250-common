@@ -66,11 +66,20 @@ function blob_fixup() {
         system_ext/etc/permissions/moto-telephony.xml)
             sed -i "s#/system/#/system_ext/#" "${2}"
             ;;
+        vendor/bin/thermal-engine)
+            sed -i 's/ro.mot.build.customerid/vendor.build.customerid/g' "${2}"
+            ;;
+        vendor/bin/rmt_storage)
+            sed -i 's/ro.mot.build.customerid/vendor.build.customerid/g' "${2}"
+            ;;
         vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc)
             sed -i "/disabled/d" "${2}"
             ;;
         vendor/lib64/hw/camera.qcom.so)
             sed -i "s/camera.mot.is.coming.cts/vendor.camera.coming.cts/g" "${2}"
+            ;;
+        vendor/lib64/libril-qc-hal-qmi.so)
+            sed -i 's/ro.mot.build.customerid/vendor.build.customerid/g' "${2}"
             ;;
         vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
             hexdump -ve '1/1 "%.2X"' "${2}" | sed "s/130A0094/1F2003D5/g" | xxd -r -p > "${TMPDIR}/${1##*/}"
