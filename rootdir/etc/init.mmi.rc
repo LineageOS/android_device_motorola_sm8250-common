@@ -301,9 +301,11 @@ on property:sys.boot_completed=1
 
 # translate MMI property in order to keep the consistent with QCOM
 on property:ro.vendor.hw.dualsim=true
+   setprop persist.radio.multisim.config dsds
    setprop persist.vendor.radio.multisim.config dsds
 
 on property:ro.vendor.hw.dualsim=false
+   setprop persist.radio.multisim.config ""
    setprop persist.vendor.radio.multisim.config ""
 
 service vendor.mmi-touch-sh /vendor/bin/init.mmi.touch.sh
