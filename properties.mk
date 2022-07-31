@@ -426,7 +426,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.sib16_support=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.procedure_bytes=SKIP \
-    persist.radio.multisim.config=dsds \
     persist.vendor.radio.rat_on=combine
 
 PRODUCT_PROPERTY_OVERRIDES += \
