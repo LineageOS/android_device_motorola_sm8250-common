@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c03d7004_6e604e94",
+        "filename": "sepolicy/vendor/genfs_contexts",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2022-08-16T06:44:17Z",
+      "side": 1,
+      "message": "tab -\u003e space",
+      "range": {
+        "startLine": 6,
+        "startChar": 51,
+        "endLine": 6,
+        "endChar": 55
+      },
+      "revId": "aaf37a259eaa7db928a8d2b455c198874bbd08b7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
