@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2080c838_c35f2602",
+        "filename": "lineagehw/touch/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2022-08-16T07:11:15Z",
+      "side": 0,
+      "message": "remember to remove the file",
+      "range": {
+        "startLine": 40,
+        "startChar": 56,
+        "endLine": 40,
+        "endChar": 72
+      },
+      "revId": "9964b2f588c90d26dae5843051e64bba8c095028",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
