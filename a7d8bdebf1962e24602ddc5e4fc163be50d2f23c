@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "55cc2b57_cbc43700",
+        "filename": "AndroidBoardCommon.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2022-08-16T06:56:02Z",
+      "side": 1,
+      "message": "this is no longer needed by nova_0flash_mmi.ko, decommonize or drop it if not used on pstar",
+      "range": {
+        "startLine": 24,
+        "startChar": 4,
+        "endLine": 24,
+        "endChar": 20
+      },
+      "revId": "a7d8bdebf1962e24602ddc5e4fc163be50d2f23c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
