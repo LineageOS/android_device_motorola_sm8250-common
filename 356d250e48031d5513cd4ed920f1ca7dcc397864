@@ -22,6 +22,30 @@
       },
       "revId": "356d250e48031d5513cd4ed920f1ca7dcc397864",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0db088cd_b3cb5b90",
+        "filename": "lineagehw/touch/HighTouchPollingRate.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 24830
+      },
+      "writtenOn": "2022-08-17T17:52:00Z",
+      "side": 1,
+      "message": "Not needed, all moto touchscreens use the touchscreen_mmi for this functionality",
+      "parentUuid": "d9a047c6_c434e335",
+      "range": {
+        "startLine": 29,
+        "startChar": 39,
+        "endLine": 29,
+        "endChar": 86
+      },
+      "revId": "356d250e48031d5513cd4ed920f1ca7dcc397864",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
