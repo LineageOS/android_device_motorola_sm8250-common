@@ -46,6 +46,30 @@
       },
       "revId": "356d250e48031d5513cd4ed920f1ca7dcc397864",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1d420d7e_a7880133",
+        "filename": "lineagehw/touch/HighTouchPollingRate.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2022-08-18T02:09:38Z",
+      "side": 1,
+      "message": "boolean toggle restored, except the boardconfig soong flags must not be set here or nio fails to compile",
+      "parentUuid": "0db088cd_b3cb5b90",
+      "range": {
+        "startLine": 29,
+        "startChar": 39,
+        "endLine": 29,
+        "endChar": 86
+      },
+      "revId": "356d250e48031d5513cd4ed920f1ca7dcc397864",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
