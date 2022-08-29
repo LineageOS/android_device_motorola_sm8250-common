@@ -206,7 +206,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := 2022-06-01
 
 # SELinux
-include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
