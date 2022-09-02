@@ -491,6 +491,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # }}}
 
 # USB {{{
+PRODUCT_PROPERTY_OVERRIDES += vendor.usb.use_gadget_hal=0
+PRODUCT_PROPERTY_OVERRIDES += vendor.usb.rndis.func.name=gsi
+PRODUCT_PROPERTY_OVERRIDES += vendor.usb.rmnet.func.name=gsi
+PRODUCT_PROPERTY_OVERRIDES += vendor.usb.rmnet.inst.name=rmnet
+PRODUCT_PROPERTY_OVERRIDES += vendor.usb.dpl.inst.name=dpl
+PRODUCT_PROPERTY_OVERRIDES += vendor.usb.qdss.inst.name=qdss
 PRODUCT_PROPERTY_OVERRIDES += vendor.usb.diag.func.name=diag
 PRODUCT_PROPERTY_OVERRIDES += vendor.usb.use_ffs_mtp=0
 # }}}
