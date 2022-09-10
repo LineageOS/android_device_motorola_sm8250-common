@@ -374,6 +374,12 @@ vendor/firmware/a650_sqe.fw
 vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
 
+# Hotword - from pstar S1RAS32.41-20-16-5
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|cd6bb25c1b2275fe6b469cdd1b1c0be4a1ce849e
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|abccb984978b6ebdb50ed520932d6523261c2b3f
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a58554d9c0dd0608552b644fbf74519a447bb
+system_ext/framework/com.android.hotwordenrollment.common.util.jar|c764b636e0be426a66be09dd08ab9c1921327ef0
+
 # IFAA
 -system_ext/app/IfaaService/IfaaService.apk
 vendor/bin/hw/vendor.zui.hardware.ifaa@1.0-service
