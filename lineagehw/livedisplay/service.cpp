@@ -10,6 +10,7 @@
 #include <binder/ProcessState.h>
 #include <hidl/HidlTransportSupport.h>
 #include <livedisplay/sdm/PictureAdjustment.h>
+#include "SimpleMode.h"
 
 using ::android::OK;
 using ::android::sp;
@@ -19,6 +20,7 @@ using ::android::hardware::joinRpcThreadpool;
 
 using ::vendor::lineage::livedisplay::V2_0::sdm::PictureAdjustment;
 using ::vendor::lineage::livedisplay::V2_0::sdm::SDMController;
+using ::vendor::lineage::livedisplay::V2_1::implementation::AntiFlicker;
 
 status_t RegisterAsServices() {
     status_t status = OK;
@@ -30,6 +32,16 @@ status_t RegisterAsServices() {
         LOG(ERROR) << "Could not register service for LiveDisplay HAL PictureAdjustment Iface ("
                    << status << ")";
         return status;
+    }
+
+    if (AntiFlicker::isSupported()) {
+        sp<AntiFlicker> af = new AntiFlicker();
+        status = af->registerAsService();
+        if (status != OK) {
+            LOG(ERROR) << "Could not register service for LiveDisplay HAL AntiFlicker Iface"
+                       << " (" << status << ")";
+            return status;
+        }
     }
 
     return OK;
