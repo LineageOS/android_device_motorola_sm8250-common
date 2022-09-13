@@ -1061,5 +1061,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IPictureAdjustment</name>
             <instance>default</instance>
         </interface>
+        <interface>
+            <name>IAntiFlicker</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 </compatibility-matrix>

@@ -12,10 +12,36 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-cc_defaults {
-    name: "livedisplay_motorola_kona",
-    defaults: ["hidl_defaults"],
+soong_config_module_type {
+    name: "moto_kona_livedisplay_hal",
+    module_type: "cc_defaults",
+    config_namespace: "MOTO_KONA_LIVEDISPLAY",
+    bool_variables: ["SUPPORT_ANTI_FLICKER"],
+    properties: [
+        "cppflags",
+        "srcs",
+    ],
+}
+
+moto_kona_livedisplay_hal {
+    name: "moto_kona_livedisplay_hal_cc_defaults",
+    soong_config_variables: {
+        SUPPORT_ANTI_FLICKER: {
+            cppflags: ["-DSUPPORT_ANTI_FLICKER"],
+            srcs: ["AntiFlicker.cpp"],
+        },
+    },
+}
+
+cc_binary {
+    name: "vendor.lineage.livedisplay@2.1-service.moto_kona",
+    init_rc: ["vendor.lineage.livedisplay@2.1-service.moto_kona.rc"],
+    defaults: [
+        "hidl_defaults",
+        "moto_kona_livedisplay_hal_cc_defaults"
+    ],
     relative_install_path: "hw",
+    vendor: true,
     srcs: [
         ":vendor.lineage.livedisplay@2.0-sdm-pa",
         ":vendor.lineage.livedisplay@2.0-sdm-utils",
@@ -24,8 +50,6 @@ cc_defaults {
     shared_libs: [
         "libbase",
         "libbinder",
-        "libcutils",
-        "libdl",
         "libhidlbase",
         "libutils",
         "vendor.lineage.livedisplay@2.0",
@@ -34,11 +58,4 @@ cc_defaults {
     header_libs: [
         "vendor.lineage.livedisplay@2.0-sdm-headers",
     ],
-}
-
-cc_binary {
-    name: "vendor.lineage.livedisplay@2.1-service.moto_kona",
-    init_rc: ["vendor.lineage.livedisplay@2.1-service.moto_kona.rc"],
-    defaults: ["livedisplay_motorola_kona"],
-    vendor: true,
 }

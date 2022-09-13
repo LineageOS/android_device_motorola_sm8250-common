@@ -21,6 +21,9 @@
 #include <hidl/HidlTransportSupport.h>
 #include <livedisplay/sdm/PictureAdjustment.h>
 #include <vendor/lineage/livedisplay/2.1/IPictureAdjustment.h>
+#ifdef SUPPORT_ANTI_FLICKER
+#include "AntiFlicker.h"
+#endif
 
 using ::android::OK;
 using ::android::sp;
@@ -31,6 +34,9 @@ using ::android::hardware::joinRpcThreadpool;
 using ::vendor::lineage::livedisplay::V2_0::sdm::PictureAdjustment;
 using ::vendor::lineage::livedisplay::V2_0::sdm::SDMController;
 using ::vendor::lineage::livedisplay::V2_1::IPictureAdjustment;
+#ifdef SUPPORT_ANTI_FLICKER
+using ::vendor::lineage::livedisplay::V2_1::implementation::AntiFlicker;
+#endif
 
 status_t RegisterAsServices() {
     status_t status = OK;
@@ -43,6 +49,18 @@ status_t RegisterAsServices() {
                    << status << ")";
         return status;
     }
+
+#ifdef SUPPORT_ANTI_FLICKER
+    sp<AntiFlicker> af = new AntiFlicker();
+    if (af->isSupported()) {
+        status = af->registerAsService();
+        if (status != OK) {
+            LOG(ERROR) << "Could not register service for LiveDisplay HAL AntiFlicker Iface"
+                       << " (" << status << ")";
+            return status;
+        }
+    }
+#endif
 
     return OK;
 }
