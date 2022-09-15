@@ -26,4 +26,5 @@ cc_binary {
         "vendor.lineage.livedisplay@2.0-sdm-headers",
     ],
     vendor: true,
+    vintf_fragments: ["vendor.lineage.livedisplay@2.1-service.moto_kona.xml"],
 }
