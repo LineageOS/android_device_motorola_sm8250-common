@@ -22,6 +22,7 @@ soong_config_module_type {
     properties: [
         "cppflags",
         "srcs",
+        "vintf_fragments",
     ],
 }
 
@@ -31,10 +32,12 @@ moto_kona_touch_hal {
         USE_TOUCH_POLLING_RATE: {
             cppflags: ["-DUSE_TOUCH_POLLING_RATE"],
             srcs: ["HighTouchPollingRate.cpp"],
+            vintf_fragments: ["vendor.lineage.touch@1.0-service.moto_kona.hpr.xml"],
         },
         SINGLE_TAP_PATH: {
             cppflags: ["-DSINGLE_TAP_PATH=\"%s\""],
             srcs: ["TouchscreenGesture.cpp"],
+            vintf_fragments: ["vendor.lineage.touch@1.0-service.moto_kona.gesture.xml"],
         },
     },
 }
