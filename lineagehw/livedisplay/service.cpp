@@ -20,7 +20,9 @@ using ::android::hardware::joinRpcThreadpool;
 
 using ::vendor::lineage::livedisplay::V2_0::sdm::PictureAdjustment;
 using ::vendor::lineage::livedisplay::V2_0::sdm::SDMController;
+using ::vendor::lineage::livedisplay::V2_1::implementation::AdaptiveBacklight;
 using ::vendor::lineage::livedisplay::V2_1::implementation::AntiFlicker;
+using ::vendor::lineage::livedisplay::V2_1::implementation::SunlightEnhancement;
 
 status_t RegisterAsServices() {
     status_t status = OK;
@@ -34,11 +36,31 @@ status_t RegisterAsServices() {
         return status;
     }
 
+    if (AdaptiveBacklight::isSupported()) {
+        sp<AdaptiveBacklight> ab = new AdaptiveBacklight();
+        status = ab->registerAsService();
+        if (status != OK) {
+            LOG(ERROR) << "Could not register service for LiveDisplay HAL AdaptiveBacklight Iface ("
+                       << status << ")";
+            return status;
+        }
+    }
+
     if (AntiFlicker::isSupported()) {
         sp<AntiFlicker> af = new AntiFlicker();
         status = af->registerAsService();
         if (status != OK) {
             LOG(ERROR) << "Could not register service for LiveDisplay HAL AntiFlicker Iface"
+                       << " (" << status << ")";
+            return status;
+        }
+    }
+
+    if (SunlightEnhancement::isSupported()) {
+        sp<SunlightEnhancement> se = new SunlightEnhancement();
+        status = se->registerAsService();
+        if (status != OK) {
+            LOG(ERROR) << "Could not register service for LiveDisplay HAL SunlightEnhancement Iface"
                        << " (" << status << ")";
             return status;
         }
