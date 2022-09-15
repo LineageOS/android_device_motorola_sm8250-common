@@ -1,5 +1,7 @@
 on init
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/cabc
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dc
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm
 
 service vendor.livedisplay-hal-2-1 /vendor/bin/hw/vendor.lineage.livedisplay@2.1-service.moto_kona
     class hal
