@@ -4,10 +4,46 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
+soong_config_module_type {
+    name: "moto_kona_livedisplay_hal",
+    module_type: "cc_defaults",
+    config_namespace: "MOTO_KONA_LIVEDISPLAY",
+    bool_variables: [
+        "SUPPORT_ADAPTIVE_BACKLIGHT",
+        "SUPPORT_ANTI_FLICKER",
+        "SUPPORT_SUNLIGHT_ENHANCEMENT"
+    ],
+    properties: [
+        "cppflags",
+        "vintf_fragments",
+    ],
+}
+
+moto_kona_livedisplay_hal {
+    name: "moto_kona_livedisplay_hal_cc_defaults",
+    soong_config_variables: {
+        SUPPORT_ADAPTIVE_BACKLIGHT: {
+            cppflags: ["-DSUPPORT_ADAPTIVE_BACKLIGHT"],
+            vintf_fragments: ["vendor.lineage.livedisplay@2.1-service.moto_kona.ab.xml"],
+        },
+        SUPPORT_ANTI_FLICKER: {
+            cppflags: ["-DSUPPORT_ANTI_FLICKER"],
+            vintf_fragments: ["vendor.lineage.livedisplay@2.1-service.moto_kona.af.xml"],
+        },
+        SUPPORT_SUNLIGHT_ENHANCEMENT: {
+            cppflags: ["-DSUPPORT_SUNLIGHT_ENHANCEMENT"],
+            vintf_fragments: ["vendor.lineage.livedisplay@2.1-service.moto_kona.se.xml"],
+        },
+    },
+}
+
 cc_binary {
     name: "vendor.lineage.livedisplay@2.1-service.moto_kona",
     init_rc: ["vendor.lineage.livedisplay@2.1-service.moto_kona.rc"],
-    defaults: ["hidl_defaults"],
+    defaults: [
+        "hidl_defaults",
+        "moto_kona_livedisplay_hal_cc_defaults"
+    ],
     relative_install_path: "hw",
     srcs: [
         ":vendor.lineage.livedisplay@2.0-sdm-pa",
@@ -28,5 +64,5 @@ cc_binary {
         "vendor.lineage.livedisplay@2.0-sysfs-headers",
     ],
     vendor: true,
-    vintf_fragments: ["vendor.lineage.livedisplay@2.1-service.moto_kona.xml"],
+    vintf_fragments: ["vendor.lineage.livedisplay@2.1-service.moto_kona.pa.xml"],
 }

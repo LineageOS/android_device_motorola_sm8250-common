@@ -36,6 +36,7 @@ status_t RegisterAsServices() {
         return status;
     }
 
+#ifdef SUPPORT_ADAPTIVE_BACKLIGHT
     if (AdaptiveBacklight::isSupported()) {
         sp<AdaptiveBacklight> ab = new AdaptiveBacklight();
         status = ab->registerAsService();
@@ -45,7 +46,9 @@ status_t RegisterAsServices() {
             return status;
         }
     }
+#endif
 
+#ifdef SUPPORT_ANTI_FLICKER
     if (AntiFlicker::isSupported()) {
         sp<AntiFlicker> af = new AntiFlicker();
         status = af->registerAsService();
@@ -55,7 +58,9 @@ status_t RegisterAsServices() {
             return status;
         }
     }
+#endif
 
+#ifdef SUPPORT_SUNLIGHT_ENHANCEMENT
     if (SunlightEnhancement::isSupported()) {
         sp<SunlightEnhancement> se = new SunlightEnhancement();
         status = se->registerAsService();
@@ -65,6 +70,7 @@ status_t RegisterAsServices() {
             return status;
         }
     }
+#endif
 
     return OK;
 }
