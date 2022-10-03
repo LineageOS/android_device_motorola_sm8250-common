@@ -65,7 +65,7 @@ telephony.lteOnCdmaDevice=1
 persist.fuse_sdcard=true
 
 #System props for BT
-ro.bluetooth.library_name=libbluetooth_qti.so
+# ro.bluetooth.library_name=libbluetooth_qti.so
 persist.vendor.btstack.aac_frm_ctl.enabled=true
 
 #system prop for RmNet Data
