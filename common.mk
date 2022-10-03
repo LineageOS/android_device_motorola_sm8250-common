@@ -162,7 +162,6 @@ PRODUCT_PACKAGES += \
     liba2dpoffload \
     libbatterylistener \
     libhdmiedid \
-    libhdmipassthru \
     libhfp \
     libsndmonitor
 
@@ -363,7 +362,6 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libstagefrighthw \
     libOmxVdec \
-    libOmxVdecHevc \
     libOmxVenc \
     libc2dcolorconvert
 
