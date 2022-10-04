@@ -54,11 +54,13 @@ vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libAndroidAlgSys.so
 vendor/lib/libaudcal.so
+-vendor/lib/libaudioparsers.so
 vendor/lib/libc++_shared.so
 vendor/lib/libqtigef.so
 vendor/lib/soundfx/libmaxxeffect-cembedded.so
 vendor/lib/soundfx/libmmieffectswrapper.so
 vendor/lib/soundfx/libspeakerbundle.so
+-vendor/lib64/libaudioparsers.so
 
 # Audio Firmware
 vendor/firmware/aw882xx_mono.bin
