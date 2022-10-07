@@ -292,11 +292,6 @@ on boot
    chown system system /sys/class/capsense/reset
    chown system system /sys/class/capsense/int_state
 
-service vendor.mmi-block-perm /vendor/bin/init.mmi.block_perm.sh
-    class main
-    user root
-    oneshot
-
 on property:sys.boot_completed=1
     setprop vendor.boot_completed ${sys.boot_completed}
 
