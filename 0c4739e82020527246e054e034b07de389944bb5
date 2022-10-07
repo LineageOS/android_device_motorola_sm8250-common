@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79ebdda9_392c50f6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-10-07T10:23:32Z",
+      "side": 1,
+      "message": "This is wrong to be committed to this branch as the commit message is not accurate. It would be fine if you did so in 19.1. Alternatively you can pick https://review.lineageos.org/q/I1af8461f8ad82afbb21b43dd6968e824ea89f5d6",
+      "revId": "0c4739e82020527246e054e034b07de389944bb5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
