@@ -295,6 +295,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Set supported Bluetooth profiles to enabled
 PRODUCT_PRODUCT_PROPERTIES += \
+    bluetooth.hardware.power.operating_voltage_mv=3700 \
     bluetooth.profile.asha.central.enabled?=true \
     bluetooth.profile.a2dp.source.enabled?=true \
     bluetooth.profile.avrcp.target.enabled?=true \
