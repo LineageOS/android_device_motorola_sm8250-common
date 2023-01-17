@@ -77,8 +77,3 @@
 /(vendor|system/vendor)/bin/init\.oem\.fingerprint2\.sh         u:object_r:vendor_init_fingerprint_exec:s0
 /(vendor|system/vendor)/bin/init\.oem\.fingerprint\.overlay\.sh u:object_r:vendor_init_fingerprint_exec:s0
 /(vendor|system/vendor)/bin/init\.oem\.hw\.sh                   u:object_r:vendor_init_hw_exec:s0
-
-# Wakeups
-/sys/devices/virtual/input/input[0-9]+/wakeup[0-9]+(/.*)?       u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/[^*]+/wakeup/wakeup[0-9]+(/.*)?       u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/misc/[^*]+/wakeup[0-9]+(/.*)?              u:object_r:sysfs_wakeup:s0
