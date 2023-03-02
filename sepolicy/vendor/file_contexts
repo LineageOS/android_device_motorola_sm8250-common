@@ -35,6 +35,9 @@
 /sys/devices/virtual/input/input[0-9]+/offset           u:object_r:vendor_sysfs_laser:s0
 /sys/devices/virtual/input/input[0-9]+/xtalk            u:object_r:vendor_sysfs_laser:s0
 
+# Executables
+/(vendor|system/vendor)/bin/subsystem_state_notifier		u:object_r:subsystem_state_notifier_exec:s0
+
 # Fingerprint
 /(mnt/vendor/persist|persist)/egis(/.*)?                u:object_r:vendor_persist_fps_file:s0
 /(mnt/vendor/persist|persist)/fps(/.*)?                 u:object_r:vendor_persist_fps_file:s0
@@ -67,6 +70,9 @@
 # Radio
 /data/vendor/misc/cutback(/.*)?                         u:object_r:cutback_data_file:s0
 /dev/socket/cutback                                     u:object_r:cutback_socket:s0
+
+# Subsystems
+/sys/devices(/platform)?/soc/4080000\.qcom,mss/subsys[0-9]/state	u:object_r:sysfs_modem_subsys:s0
 
 # Touch
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.moto_kona           u:object_r:hal_lineage_touch_default_exec:s0

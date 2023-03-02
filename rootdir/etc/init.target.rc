@@ -170,3 +170,12 @@ service dcvs-sh /vendor/bin/init.qti.dcvs.sh
 
 on property:vendor.dcvs.prop=1
    start dcvs-sh
+
+# RIL
+on property:vendor.subsys_state_notifier.modem.state=OFFLINE
+    stop vendor.qcrild
+    stop vendor.qcrild2
+
+on property:vendor.subsys_state_notifier.modem.state=ONLINE
+    start vendor.qcrild
+    start vendor.qcrild2
