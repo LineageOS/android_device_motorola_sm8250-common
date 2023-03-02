@@ -68,6 +68,10 @@
 /data/vendor/misc/cutback(/.*)?                         u:object_r:cutback_data_file:s0
 /dev/socket/cutback                                     u:object_r:cutback_socket:s0
 
+# Subsystem state notifier
+/(vendor|system/vendor)/bin/subsystem_state_notifier    u:object_r:subsystem_state_notifier_exec:s0
+/sys/devices/platform/soc/soc:qcom,mdm0/subsys[0-9]+/state                              u:object_r:vendor_sysfs_ssr_state:s0
+
 # Touch
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.moto_kona           u:object_r:hal_lineage_touch_default_exec:s0
 

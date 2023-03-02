@@ -1,0 +1,10 @@
+cc_binary {
+    name: "subsystem_state_notifier",
+    srcs: ["main.c"],
+    shared_libs: [
+        "libcutils",
+        "liblog",
+    ],
+    init_rc: ["subsystem_state_notifier.rc"],
+    vendor: true
+}
