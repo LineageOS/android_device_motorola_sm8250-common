@@ -1,0 +1,16 @@
+service vendor.subsystem_state_notifier.esoc0 /vendor/bin/subsystem_state_notifier esoc0
+    class late_start
+    user system
+    group system
+
+on property:vendor.subsys_state_notifier.esoc0.state=OFFLINE
+    stop vendor.qcrild
+
+on property:vendor.subsys_state_notifier.esoc0.state=OFFLINE && property:persist.radio.multisim.config=dsds
+    stop vendor.qcrild2
+
+on property:vendor.subsys_state_notifier.esoc0.state=ONLINE
+    start vendor.qcrild
+
+on property:vendor.subsys_state_notifier.esoc0.state=ONLINE && property:persist.radio.multisim.config=dsds
+    start vendor.qcrild2
