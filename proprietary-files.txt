@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from nio_retcn S1RN32.55-16-1
+# All unpinned blobs below are extracted from pstar-user 12 S1RAS32.41-20-16-11 2d77a8 release-keys
 
 # ADSP
 vendor/bin/adsprpcd
@@ -85,7 +85,6 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so
 # Bluetooth (A2DP)
 vendor/lib/btaudio_offload_if.so
 vendor/lib/libbluetooth_audio_session_qti.so
-vendor/lib/libbluetooth_audio_session_qti_2_1.so
 
 # Bluetooth (aptX)
 lib64/libaptX_encoder.so
@@ -265,15 +264,17 @@ vendor/lib64/libtrustedapploader.so
 vendor/lib64/libwvhidl.so
 
 # Fingerprint
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-ets
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-fpc
 vendor/bin/hw/fpc_ident:vendor/bin/fpc_ident
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-ets2.rc
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc
 vendor/lib64/com.fingerprints.extension@1.0.so
-vendor/lib64/libets_fp_et5.so
-vendor/lib64/libets_teeclient.so
-vendor/lib64/vendor.egistec.hardware.fingerprint@2.0.so
+
+# Fingerprint - from nio_retcn S1RN32.55-16-1
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-ets|b484552468494798245bf077877bcb77920934bf
+vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-ets2.rc|943ee28985b328d8712f9da7958e5f54e6242aa6
+vendor/lib64/libets_fp_et5.so|af8d8d79cbff8d8fa9752233575d3a0657f59e2e
+vendor/lib64/libets_teeclient.so|8169a886de073722de2407d5eb74bf88af13a1a9
+vendor/lib64/vendor.egistec.hardware.fingerprint@2.0.so|8f5b90f1b5d344972facc992f5ca85d9aca7ba68
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
@@ -370,11 +371,11 @@ vendor/firmware/a650_sqe.fw
 vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
 
-# IFAA
-system_ext/app/IfaaService/IfaaService.apk
-vendor/bin/hw/vendor.zui.hardware.ifaa@1.0-service
-vendor/etc/init/vendor.zui.hardware.ifaa@1.0-service.rc
-vendor/lib64/vendor.zui.hardware.ifaa@1.0.so
+# IFAA - from nio_retcn S1RN32.55-16-1
+system_ext/app/IfaaService/IfaaService.apk|395b5ce60cd2d3d214f9a0f5ae7153c5b8796411
+vendor/bin/hw/vendor.zui.hardware.ifaa@1.0-service|942464254279c4336478a74e079c135063e80343
+vendor/etc/init/vendor.zui.hardware.ifaa@1.0-service.rc|7f1e142b46e4c83d4c0e5a98ce9e9f313611d99a
+vendor/lib64/vendor.zui.hardware.ifaa@1.0.so|760064ae6a4ef5bc25f58bf33acf138adf184787
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
@@ -478,8 +479,8 @@ vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
-# NFC
-vendor/lib64/libpn557_fw.so
+# NFC - from nio_retcn S1RN32.55-16-1
+vendor/lib64/libpn557_fw.so|80471aaf19c35f6fb47e69edd404e1e0529ba06b
 
 # OEM
 vendor/bin/motobox
@@ -702,13 +703,8 @@ vendor/radio/qcril_database/upgrade/28_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/29_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/30_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/31_version_qcrildb.sql
-vendor/radio/qcril_database/upgrade/33_version_qcrildb.sql
-vendor/radio/qcril_database/upgrade/34_version_qcrildb.sql
-vendor/radio/qcril_database/upgrade/35_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/36_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/37_version_qcrildb.sql
-vendor/radio/qcril_database/upgrade/38_version_qcrildb.sql
-vendor/radio/qcril_database/upgrade/39_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/3_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/4_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/5_version_qcrildb.sql
@@ -716,6 +712,13 @@ vendor/radio/qcril_database/upgrade/6_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/7_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/8_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/9_version_qcrildb.sql
+
+# Radio - from nio_retcn S1RN32.55-16-1
+vendor/radio/qcril_database/upgrade/33_version_qcrildb.sql|2f1ffd53a7d2b1214262acdb1e37b1a11f3881a3
+vendor/radio/qcril_database/upgrade/34_version_qcrildb.sql|57dbcaf1f4c00d54e406951d02a7d96a3ab3e7b2
+vendor/radio/qcril_database/upgrade/35_version_qcrildb.sql|1ba9773fd66dccbddaeeee2ce6c789cbee4e30c9
+vendor/radio/qcril_database/upgrade/38_version_qcrildb.sql|c7404f93a447a441a85de323fe47a61a7ec7ec33
+vendor/radio/qcril_database/upgrade/39_version_qcrildb.sql|be1144bad33853dba8425c3d52d71e3730b279c4
 
 # Radio - IMS (APK)
 etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-telephony.xml
@@ -816,9 +819,7 @@ vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 # Sensor-configs
 vendor/etc/sensors/config/default_sensors.json
 vendor/etc/sensors/config/dynamic_sensors.json
-vendor/etc/sensors/config/icm4x6xx_0.json
 vendor/etc/sensors/config/irq.json
-vendor/etc/sensors/config/lsm6ds3c_0.json
 vendor/etc/sensors/config/mmc56x3x_0.json
 vendor/etc/sensors/config/mot_camgest.json
 vendor/etc/sensors/config/mot_chopchop.json
@@ -844,7 +845,6 @@ vendor/etc/sensors/config/sns_rotv.json
 vendor/etc/sensors/config/sns_smd.json
 vendor/etc/sensors/config/sns_tilt.json
 vendor/etc/sensors/config/sns_tilt_sw_disabled.json
-vendor/etc/sensors/config/vcnl36866_0.json
 vendor/etc/sensors/proto/descriptor.proto
 vendor/etc/sensors/proto/mot_barocal.proto
 vendor/etc/sensors/proto/mot_camgest.proto
@@ -937,6 +937,11 @@ vendor/etc/sensors/proto/sns_wrist_tilt_gesture.proto
 vendor/etc/sensors/proto/tcs3708.proto
 vendor/etc/sensors/sns_reg_config
 
+# Sensor-configs - from nio_retcn S1RN32.55-16-1
+vendor/etc/sensors/config/icm4x6xx_0.json|5ff81dc85a56a3bb8b8d14eb357ab75a6bbde0f0
+vendor/etc/sensors/config/lsm6ds3c_0.json|9eb2897cf94f73d9b57c0bece75a5a616df0b38b
+vendor/etc/sensors/config/vcnl36866_0.json|9bdb3409c0574d3d919602806d40dbf47ccb160c
+
 # Snapdragon Computer Vision Engine
 vendor/lib/libfastcvdsp_stub.so
 -vendor/lib/libfastcvopt.so
@@ -956,11 +961,13 @@ vendor/lib64/libscveObjectTracker.so
 vendor/lib64/libscveObjectTracker_stub.so
 
 # Soter
-system_ext/app/SoterService/SoterService.apk
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
+
+# Soter - from nio_retcn S1RN32.55-16-1
+system_ext/app/SoterService/SoterService.apk|d5ab3a0f4421164badb33d3b5dc27d9c4251de13
 
 # Thermal
 vendor/bin/thermal-engine
