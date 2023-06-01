@@ -16,7 +16,7 @@ function notice {
 
 persist_fps_id=/mnt/vendor/persist/fps/vendor_id
 persist_fps_id2=/mnt/vendor/persist/fps/last_vendor_id
-MAX_TIMES=20
+MAX_TIMES=100
 
 if [ ! -f $persist_fps_id ]; then
     notice "warn: no associated persist file found"
@@ -25,12 +25,16 @@ fi
 FPS_VENDOR_NONE=none
 FPS_VENDOR_EGIS=egis
 FPS_VENDOR_FPC=fpc
+FPS_VENDOR_GOODIX=goodix
 
 prop_fps_status=vendor.hw.fingerprint.status
 prop_persist_fps=persist.vendor.hardware.fingerprint
+prop_device=ro.product.vendor.device
 
 FPS_STATUS_NONE=none
 FPS_STATUS_OK=ok
+
+DEVICE_NIO=nio
 
 fps_vendor2=$(cat $persist_fps_id2)
 if [ -z $fps_vendor2 ]; then
@@ -50,16 +54,19 @@ else
     fps=$fps_vendor
 fi
 
-for i in $(seq 1 2)
+for i in $(seq 1 3)
 do
 
 setprop $prop_fps_status $FPS_STATUS_NONE
 if [ $fps == $FPS_VENDOR_FPC ]; then
     notice "start fps_hal"
     start fps_hal
-else
+elif [ $fps == $FPS_VENDOR_EGIS ]; then
     notice "start ets_hal"
     start ets_hal
+else
+    notice "start goodix_hal"
+    start goodix_hal
 fi
 
 notice "wait for HAL finish ..."
@@ -87,15 +94,28 @@ if [ $fps_status == $FPS_STATUS_OK ]; then
     return 0
 fi
 
+DEVICE=$(getprop $prop_device)
 if [ $fps == $fps_vendor2 ]; then
-    if [ $fps == $FPS_VENDOR_FPC ]; then
-        rmmod fpc1020_mmi
-        insmod /vendor/lib/modules/ets_fps_mmi.ko
-        fps=$FPS_VENDOR_EGIS
+    if [ $DEVICE == $DEVICE_NIO ]; then
+        if [ $fps == $FPS_VENDOR_FPC ]; then
+            rmmod fpc1020_mmi
+            insmod /vendor/lib/modules/ets_fps_mmi.ko
+            fps=$FPS_VENDOR_EGIS
+        else
+            rmmod ets_fps_mmi
+            insmod /vendor/lib/modules/fpc1020_mmi.ko
+            fps=$FPS_VENDOR_FPC
+        fi
     else
-        rmmod ets_fps_mmi
-        insmod /vendor/lib/modules/fpc1020_mmi.ko
-        fps=$FPS_VENDOR_FPC
+        if [ $fps == $FPS_VENDOR_FPC ]; then
+            rmmod fpc1020_mmi
+            insmod /vendor/lib/modules/goodix_fod_mmi.ko
+            fps=$FPS_VENDOR_GOODIX
+        else
+            rmmod goodix_fod_mmi
+            insmod /vendor/lib/modules/fpc1020_mmi.ko
+            fps=$FPS_VENDOR_FPC
+        fi
     fi
     notice "- update FPS vendor"
     echo $fps > $persist_fps_id
