@@ -22,9 +22,14 @@ persist_fps_id=/mnt/vendor/persist/fps/vendor_id
 
 FPS_VENDOR_EGIS=egis
 FPS_VENDOR_FPC=fpc
+FPS_VENDOR_GOODIX=goodix
 FPS_VENDOR_NONE=none
 
 PROP_FPS_IDENT=vendor.hw.fps.ident
+PROP_DEVICE=ro.product.vendor.device
+
+DEVICE_NIO=nio
+
 MAX_TIMES=20
 
 function ident_fps {
@@ -51,9 +56,16 @@ function ident_fps {
         fi
     done
 
-    notice "- install Egis driver"
-    insmod /vendor/lib/modules/ets_fps_mmi.ko
-    echo $FPS_VENDOR_EGIS > $persist_fps_id
+    DEVICE=$(getprop $prop_device)
+    if [ $DEVICE == $DEVICE_NIO ]; then
+        notice "- install Egis driver"
+        insmod /vendor/lib/modules/ets_fps_mmi.ko
+        echo $FPS_VENDOR_EGIS > $persist_fps_id
+    else
+        notice "- install Goodix driver"
+        insmod /vendor/lib/modules/goodix_fod_mmi.ko
+        echo $FPS_VENDOR_GOODIX > $persist_fps_id
+    fi
     return 0
 }
 
@@ -77,6 +89,12 @@ fi
 if [ $fps_vendor == $FPS_VENDOR_FPC ]; then
     notice "- install FPC driver"
     insmod /vendor/lib/modules/fpc1020_mmi.ko
+    return $?
+fi
+
+if [ $fps_vendor == $FPS_VENDOR_GOODIX ]; then
+    log "- install Goodix driver"
+    insmod /vendor/lib/modules/goodix_fod_mmi.ko
     return $?
 fi
 
