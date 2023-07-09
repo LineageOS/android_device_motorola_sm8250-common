@@ -88,7 +88,7 @@ vendor.audio.flac.sw.decoder.24bit=true
 
 #split a2dp DSP supported encoder list
 PRODUCT_PROPERTY_OVERRIDES += \
-persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
+persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac
 
 # A2DP offload support
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -100,7 +100,7 @@ persist.bluetooth.a2dp_offload.disabled=false
 
 # A2DP offload DSP supported encoder list
 PRODUCT_PROPERTY_OVERRIDES += \
-persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
+persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd
 
 #enable software decoders for ALAC and APE
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -266,7 +266,7 @@ PRODUCT_PROPERTY_OVERRIDES += persist.vendor.qcom.bluetooth.soc=hastings
 #split a2dp support
 PRODUCT_PROPERTY_OVERRIDES += persist.vendor.qcom.bluetooth.enable.splita2dp=true
 #a2dp offload capability
-PRODUCT_PROPERTY_OVERRIDES += persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2
+PRODUCT_PROPERTY_OVERRIDES += persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-aptxadaptiver2
 #Embedded wipower mode
 PRODUCT_PROPERTY_OVERRIDES += ro.vendor.bluetooth.wipower=false
 #aac frame control support
