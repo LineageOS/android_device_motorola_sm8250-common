@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
 BOARD_VENDOR := motorola
 
 COMMON_PATH := device/motorola/sm8250-common
@@ -52,6 +50,10 @@ AB_OTA_PARTITIONS += \
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
+
+# BUILD_BROKEN_*
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
