@@ -213,9 +213,6 @@ TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
-# Security patch level
-VENDOR_SECURITY_PATCH := 2022-06-01
-
 # SELinux
 include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
