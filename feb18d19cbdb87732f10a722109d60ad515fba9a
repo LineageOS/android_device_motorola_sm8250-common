@@ -16,6 +16,24 @@
       "message": "Honestly not sure importance on this as it\u0027s unpolulated on stock...\n\nLN 108 is what missing on many which tftp / rmt_storage is looking at.",
       "revId": "feb18d19cbdb87732f10a722109d60ad515fba9a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "31287a58_e8848184",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2023-11-15T06:36:38Z",
+      "side": 1,
+      "message": "ack",
+      "parentUuid": "a1a3d5f6_dee04746",
+      "revId": "feb18d19cbdb87732f10a722109d60ad515fba9a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
