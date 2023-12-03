@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from nio_retcn S1RN32.55-16-1
+# All unpinned blobs below are extracted from pstar T1RA33.55-15-16-5 d9def9-6b8134
 
 # ADSP
 vendor/bin/adsprpcd
@@ -265,15 +265,10 @@ vendor/lib64/libtrustedapploader.so
 vendor/lib64/libwvhidl.so
 
 # Fingerprint
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-ets
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-fpc
 vendor/bin/hw/fpc_ident:vendor/bin/fpc_ident
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-ets2.rc
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc
 vendor/lib64/com.fingerprints.extension@1.0.so
-vendor/lib64/libets_fp_et5.so
-vendor/lib64/libets_teeclient.so
-vendor/lib64/vendor.egistec.hardware.fingerprint@2.0.so
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
@@ -370,11 +365,11 @@ vendor/firmware/a650_sqe.fw
 vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
 
-# IFAA
-system_ext/app/IfaaService/IfaaService.apk
-vendor/bin/hw/vendor.zui.hardware.ifaa@1.0-service
-vendor/etc/init/vendor.zui.hardware.ifaa@1.0-service.rc
-vendor/lib64/vendor.zui.hardware.ifaa@1.0.so
+# IFAA - from pstar retcn T1TR33.4-30-77
+system_ext/app/IfaaService/IfaaService.apk|34faae5cb6ff2cd1f259eece94bf2559218006e6
+vendor/bin/hw/vendor.zui.hardware.ifaa@1.0-service|4abbdf029b01d987f4414dd48577642c153509c0
+vendor/etc/init/vendor.zui.hardware.ifaa@1.0-service.rc|7f1e142b46e4c83d4c0e5a98ce9e9f313611d99a
+vendor/lib64/vendor.zui.hardware.ifaa@1.0.so|760064ae6a4ef5bc25f58bf33acf138adf184787
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
@@ -469,17 +464,12 @@ product/etc/permissions/com.motorola.motodisplay.xml
 # Neural-networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc
-vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti-hta.xml
 vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml
 vendor/lib64/libhexagon_nn_stub.so
 vendor/lib64/libhta_hexagon_runtime.so
 vendor/lib64/unnhal-acc-adreno.so
 vendor/lib64/unnhal-acc-common.so
-vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
-
-# NFC
-vendor/lib64/libpn557_fw.so
 
 # OEM
 vendor/bin/motobox
@@ -607,7 +597,6 @@ vendor/bin/qrtr-cfg
 vendor/bin/qrtr-ns
 vendor/bin/qti
 vendor/bin/rmt_storage
-vendor/bin/ssgtzd
 vendor/bin/tftp_server
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
@@ -710,6 +699,10 @@ vendor/radio/qcril_database/upgrade/37_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/38_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/39_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/3_version_qcrildb.sql
+vendor/radio/qcril_database/upgrade/40_version_qcrildb.sql
+vendor/radio/qcril_database/upgrade/41_version_qcrildb.sql
+vendor/radio/qcril_database/upgrade/42_version_qcrildb.sql
+vendor/radio/qcril_database/upgrade/43_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/4_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/5_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/6_version_qcrildb.sql
@@ -738,6 +731,7 @@ system_ext/lib64/lib-imsvtutils.so
 system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
@@ -816,9 +810,7 @@ vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 # Sensor-configs
 vendor/etc/sensors/config/default_sensors.json
 vendor/etc/sensors/config/dynamic_sensors.json
-vendor/etc/sensors/config/icm4x6xx_0.json
 vendor/etc/sensors/config/irq.json
-vendor/etc/sensors/config/lsm6ds3c_0.json
 vendor/etc/sensors/config/mmc56x3x_0.json
 vendor/etc/sensors/config/mot_camgest.json
 vendor/etc/sensors/config/mot_chopchop.json
@@ -844,7 +836,6 @@ vendor/etc/sensors/config/sns_rotv.json
 vendor/etc/sensors/config/sns_smd.json
 vendor/etc/sensors/config/sns_tilt.json
 vendor/etc/sensors/config/sns_tilt_sw_disabled.json
-vendor/etc/sensors/config/vcnl36866_0.json
 vendor/etc/sensors/proto/descriptor.proto
 vendor/etc/sensors/proto/mot_barocal.proto
 vendor/etc/sensors/proto/mot_camgest.proto
@@ -955,12 +946,12 @@ vendor/lib64/libscveObjectSegmentation_stub.so
 vendor/lib64/libscveObjectTracker.so
 vendor/lib64/libscveObjectTracker_stub.so
 
-# Soter
-system_ext/app/SoterService/SoterService.apk
-vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
-vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.soter@1.0.so
+# Soter - from pstar retcn T1TR33.4-30-77
+system_ext/app/SoterService/SoterService.apk|571d9b065ac319426d15b3d9a0c35a7fdb419162
+vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|8e315a85eeeb94a51f1533c80212d2fc0ec88760
+vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
+vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|b1bea56084e2530a437746674fc7fc0488ca0a2c
+vendor/lib64/vendor.qti.hardware.soter@1.0.so|50b981cfc2fd780f2187fcd10a61347886b73173
 
 # Thermal
 vendor/bin/thermal-engine

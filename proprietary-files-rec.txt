@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from nio_retcn S1RN32.55-16-1
+# All unpinned blobs below are extracted from pstar T1RA33.55-15-16-5 d9def9-6b8134
 
 # Vibrator firmware
 vendor/firmware/aw8695_haptic.bin:recovery/root/vendor/firmware/aw8695_haptic.bin
