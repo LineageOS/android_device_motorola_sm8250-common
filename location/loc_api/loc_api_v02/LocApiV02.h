@@ -26,6 +26,42 @@
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+ /*
+Changes from Qualcomm Innovation Center are provided under the following license:
+
+Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted (subject to the limitations in the
+disclaimer below) provided that the following conditions are met:
+
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+
+    * Redistributions in binary form must reproduce the above
+      copyright notice, this list of conditions and the following
+      disclaimer in the documentation and/or other materials provided
+      with the distribution.
+
+    * Neither the name of Qualcomm Innovation Center, Inc. nor the names of its
+      contributors may be used to endorse or promote products derived
+      from this software without specific prior written permission.
+
+NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE
+GRANTED BY THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT
+HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
 #ifndef LOC_API_V_0_2_H
 #define LOC_API_V_0_2_H
 
@@ -174,6 +210,9 @@ private:
   /* Convert GPS LOCK from QMI format to LocationAPI format */
   static GnssConfigGpsLock convertGpsLockFromQMItoAPI(qmiLocLockEnumT_v02 lock);
 
+  /* Convert Engine Lock State from QMI format to LocationAPI format */
+  static EngineLockState convertEngineLockState(qmiLocEngineLockStateEnumT_v02 LockState);
+
   /* Convert error from loc_api_v02 to loc eng format*/
   static enum loc_api_adapter_err convertErr(locClientStatusEnumType status);
 
@@ -321,6 +360,7 @@ private:
   bool cacheGnssMeasurementSupport();
   void registerMasterClient();
   int getGpsLock(uint8_t subType);
+  void getEngineLockStateSync();
   void getRobustLocationConfig(uint32_t sessionId, LocApiResponse* adapterResponse);
   void getMinGpsWeek(uint32_t sessionId, LocApiResponse* adapterResponse);
 
@@ -352,6 +392,7 @@ private:
   void geofenceStatusEvent(const qmiLocEventGeofenceGenAlertIndMsgT_v02* alertInfo);
   void geofenceDwellEvent(const qmiLocEventGeofenceBatchedDwellIndMsgT_v02 *dwellEvent);
   void reportLatencyInfo(const qmiLocLatencyInformationIndMsgT_v02* pLocLatencyInfo);
+  void reportEngineLockStatus(const qmiLocEngineLockStateEnumT_v02 engineLockState);
 
 protected:
   virtual enum loc_api_adapter_err
