@@ -155,7 +155,7 @@ volatile int32_t LocApiBase::mMsgTaskRefCount = 0;
 LocApiBase::LocApiBase(LOC_API_ADAPTER_EVENT_MASK_T excludedMask,
                        ContextBase* context) :
     mContext(context),
-    mMask(0), mExcludedMask(excludedMask)
+    mMask(0), mExcludedMask(excludedMask), mEngineLockState(ENGINE_LOCK_STATE_ENABLED)
 {
     memset(mLocAdapters, 0, sizeof(mLocAdapters));
 
@@ -615,6 +615,12 @@ void LocApiBase::reportLatencyInfo(GnssLatencyInfo& gnssLatencyInfo)
     TO_ALL_LOCADAPTERS(mLocAdapters[i]->reportLatencyInfoEvent(gnssLatencyInfo));
 }
 
+void LocApiBase::reportEngineLockStatus(EngineLockState engineLockState)
+{
+    // loop through adapters, and deliver to the All handling adapter.
+    TO_ALL_LOCADAPTERS(mLocAdapters[i]->handleEngineLockStatusEvent(engineLockState));
+}
+
 enum loc_api_adapter_err LocApiBase::
    open(LOC_API_ADAPTER_EVENT_MASK_T /*mask*/)
 DEFAULT_IMPL(LOC_API_ADAPTER_ERR_SUCCESS)
@@ -1034,7 +1040,7 @@ bool ElapsedRealtimeEstimator::getCurrentTime(
     struct timespec sinceBootTime;
     struct timespec sinceBootTimeTest;
     bool clockGetTimeSuccess = false;
-    const uint32_t MAX_TIME_DELTA_VALUE_NANOS = 10000;
+    const uint32_t MAX_TIME_DELTA_VALUE_NANOS = 15000;
     const uint32_t MAX_GET_TIME_COUNT = 20;
     /* Attempt to get CLOCK_REALTIME and CLOCK_BOOTIME in succession without an interruption
     or context switch (for up to MAX_GET_TIME_COUNT times) to avoid errors in the calculation */
