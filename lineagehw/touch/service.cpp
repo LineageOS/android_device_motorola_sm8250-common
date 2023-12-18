@@ -33,13 +33,11 @@ using ::vendor::lineage::touch::V1_0::implementation::TouchscreenGesture;
 int main() {
     android::hardware::configureRpcThreadpool(1, true /*callerWillJoin*/);
 
-#ifdef SINGLE_TAP_PATH
     sp<ITouchscreenGesture> gesture_service = new TouchscreenGesture();
     if (gesture_service->registerAsService() != OK) {
         LOG(ERROR) << "Cannot register touchscreen gesture HAL service.";
         return 1;
     }
-#endif
 
 #ifdef USE_TOUCH_POLLING_RATE
     sp<IHighTouchPollingRate> hpl_service = new HighTouchPollingRate();
