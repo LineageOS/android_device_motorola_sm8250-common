@@ -204,6 +204,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Power
+TARGET_POWERHAL_MODE_EXT := $(COMMON_PATH)/lineagehw/touch/power-mode.cpp
 TARGET_USES_INTERACTION_BOOST := true
 
 # Properties
