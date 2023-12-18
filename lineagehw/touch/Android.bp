@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2022 The LineageOS Project
+// Copyright (C) 2022-2023 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,7 +18,6 @@ soong_config_module_type {
     module_type: "cc_defaults",
     config_namespace: "MOTO_KONA_TOUCH",
     bool_variables: ["USE_TOUCH_POLLING_RATE"],
-    value_variables: ["SINGLE_TAP_PATH"],
     properties: [
         "cppflags",
         "srcs",
@@ -34,11 +33,6 @@ moto_kona_touch_hal {
             srcs: ["HighTouchPollingRate.cpp"],
             vintf_fragments: ["vendor.lineage.touch@1.0-service.moto_kona.hpr.xml"],
         },
-        SINGLE_TAP_PATH: {
-            cppflags: ["-DSINGLE_TAP_PATH=\"%s\""],
-            srcs: ["TouchscreenGesture.cpp"],
-            vintf_fragments: ["vendor.lineage.touch@1.0-service.moto_kona.gesture.xml"],
-        },
     },
 }
 
@@ -53,7 +47,9 @@ cc_binary {
     vendor: true,
     srcs: [
         "service.cpp",
+        "TouchscreenGesture.cpp",
     ],
+    vintf_fragments: ["vendor.lineage.touch@1.0-service.moto_kona.gesture.xml"],
     shared_libs: [
         "libbase",
         "libhidlbase",

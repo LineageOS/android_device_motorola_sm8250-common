@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 The LineageOS Project
+ * Copyright (C) 2022-2023 The LineageOS Project
  *
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -9,17 +9,18 @@
 #include <android-base/file.h>
 #include <android-base/logging.h>
 
+#include "MMIGesture.h"
 #include "TouchscreenGesture.h"
 
 namespace {
 struct GestureInfo {
     int32_t keycode;
     const char* name;
-    const char* path;
+    const mmi_gesture::Gesture gesture;
 };
 
 constexpr GestureInfo kGestureNodes[] = {
-        {250, "Single Tap", SINGLE_TAP_PATH},
+        {59, "Single Tap", mmi_gesture::Gesture::kSingleTap},
 };
 }  // anonymous namespace
 
@@ -45,14 +46,7 @@ Return<bool> TouchscreenGesture::setGestureEnabled(
     if (gesture.id >= std::size(kGestureNodes)) {
         return false;
     }
-
-    if (!android::base::WriteStringToFile(std::to_string(enabled),
-                                          kGestureNodes[gesture.id].path)) {
-        LOG(ERROR) << "Wrote file " << kGestureNodes[gesture.id].path << " failed";
-        return false;
-    }
-
-    return true;
+    return mmi_gesture::SetEnabled(kGestureNodes[gesture.id].gesture, enabled);
 }
 
 }  // namespace implementation
