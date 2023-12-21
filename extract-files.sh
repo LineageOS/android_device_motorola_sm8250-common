@@ -58,7 +58,12 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+# Fallback when device doesn't define it
 function blob_fixup() {
+    blob_fixup_common "$@"
+}
+
+function blob_fixup_common() {
     case "${1}" in
         system_ext/lib64/libwfdnative.so)
             ${PATCHELF} --remove-needed "android.hidl.base@1.0.so" "${2}"
