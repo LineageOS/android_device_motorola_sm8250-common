@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from pstar T1RA33.55-15-16-5 d9def9-6b8134
+# All unpinned blobs below are extracted from pstar T1RAA33.39-11-11
 
 # ADSP
 vendor/bin/adsprpcd
@@ -359,11 +359,11 @@ vendor/firmware/a650_sqe.fw
 vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
 
-# IFAA - from pstar retcn T1TR33.4-30-77
-system_ext/app/IfaaService/IfaaService.apk|34faae5cb6ff2cd1f259eece94bf2559218006e6
-vendor/bin/hw/vendor.zui.hardware.ifaa@1.0-service|4abbdf029b01d987f4414dd48577642c153509c0
-vendor/etc/init/vendor.zui.hardware.ifaa@1.0-service.rc|7f1e142b46e4c83d4c0e5a98ce9e9f313611d99a
-vendor/lib64/vendor.zui.hardware.ifaa@1.0.so|760064ae6a4ef5bc25f58bf33acf138adf184787
+# IFAA
+system_ext/app/IfaaService/IfaaService.apk
+vendor/bin/hw/vendor.zui.hardware.ifaa@1.0-service
+vendor/etc/init/vendor.zui.hardware.ifaa@1.0-service.rc
+vendor/lib64/vendor.zui.hardware.ifaa@1.0.so
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
@@ -709,15 +709,21 @@ etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-telephony.xml
 framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
 
 # Radio - IMS (APK) - from patched source
-system_ext/priv-app/ims/ims.apk|fe3c36c4d8fc9d7720cfd1833ea2ade51f6b5111
+system_ext/priv-app/ims/ims.apk|62955364e05ad393b8cf7077c0a2941e16bf6d13
 
 # Radio - IMS
 system_ext/app/ImsRcsService/ImsRcsService.apk
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
 system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
+system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar
+system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar
 system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar
+system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar
 system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar
+system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar
 system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
@@ -940,12 +946,12 @@ vendor/lib64/libscveObjectSegmentation_stub.so
 vendor/lib64/libscveObjectTracker.so
 vendor/lib64/libscveObjectTracker_stub.so
 
-# Soter - from pstar retcn T1TR33.4-30-77
-system_ext/app/SoterService/SoterService.apk|571d9b065ac319426d15b3d9a0c35a7fdb419162
-vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|8e315a85eeeb94a51f1533c80212d2fc0ec88760
-vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
-vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|b1bea56084e2530a437746674fc7fc0488ca0a2c
-vendor/lib64/vendor.qti.hardware.soter@1.0.so|50b981cfc2fd780f2187fcd10a61347886b73173
+# Soter
+system_ext/app/SoterService/SoterService.apk
+vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
+vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
+vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
 # Thermal
 vendor/bin/thermal-engine
@@ -1023,7 +1029,7 @@ system_ext/lib64/libwfdconfigutils.so|483aca3a0e52bea1702cebf40e00d0c6c8c24063
 system_ext/lib64/libwfddisplayconfig.so|59a5cb17ffe46900c0ae26a8937a5ddab80fe283
 system_ext/lib64/libwfdmminterface.so|b1e33104bc2231c7f75132757a28c918ee4b3889
 system_ext/lib64/libwfdmmsink.so|0db18686f52492b89d9feffffd0494371f6a8c18
-system_ext/lib64/libwfdnative.so|f8a1328641167d037f097d6595079997de0a1662|5b47a04562fb7e806d81f39856bcad3bde319554
+system_ext/lib64/libwfdnative.so|5b47a04562fb7e806d81f39856bcad3bde319554
 system_ext/lib64/libwfdrtsp.so|1957934068e8befa237106fbc584457e86ef07da
 system_ext/lib64/libwfdsinksm.so|bd2369a1203a3b24115605ec1d27d288b4b62718
 system_ext/lib64/libwfduibcinterface.so|d5a578a2159c4681cb9d159b93c1c39b8f3091f7
