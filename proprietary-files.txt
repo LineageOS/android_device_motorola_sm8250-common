@@ -965,7 +965,9 @@ vendor/lib64/libtime_genoff.so
 
 # Vibrator firmware
 vendor/firmware/aw8695_haptic.bin
+vendor/firmware/aw8695_haptic.bin:vendor_ramdisk/lib/firmware/aw8695_haptic.bin
 vendor/firmware/aw8695_rtp.bin
+vendor/firmware/aw8695_rtp.bin:vendor_ramdisk/lib/firmware/aw8695_rtp.bin
 
 # VPP
 vendor/bin/vppservice
