@@ -97,7 +97,6 @@ RFS_MDM_MPSS_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/mdm/mpss
 $(RFS_MDM_MPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating RFS MDM MPSS folder structure: $@"
 	@rm -rf $@
-	@mkdir -p $(dir $@)/readonly/fsg
 	@mkdir -p $@/readonly/vendor
 	$(hide) ln -sf /data/vendor/tombstones/rfs/modem $@/ramdumps
 	$(hide) ln -sf /mnt/vendor/persist/rfs/mdm/mpss $@/readwrite
