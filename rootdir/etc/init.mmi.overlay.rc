@@ -2,7 +2,6 @@
 # import /vendor/etc/init/hw/init.vendor.st21nfc.rc
 on early-init
    setprop ro.vendor.device_edition ${ro.boot.edition}
-   exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules qpnp-smbcharger-mmi qpnp_adaptive_charge
 
 on mmi-priority
    # Only high priority MMI DLKMs loaded here

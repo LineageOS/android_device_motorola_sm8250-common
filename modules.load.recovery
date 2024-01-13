@@ -1,7 +1,5 @@
 mmi_annotate.ko
 mmi_info.ko
 mmi_relay.ko
-qpnp-smbcharger-mmi.ko
-qpnp_adaptive_charge.ko
 sensors_class.ko
 touchscreen_mmi.ko
