@@ -528,7 +528,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.ssr.restart_level=ALL_ENABLE \
-    ro.mot.build.customerid=retcn \
+    vendor.build.customerid=retcn \
     ro.vendor.mot.factory=false
 
 # Enable zygote critical window.
