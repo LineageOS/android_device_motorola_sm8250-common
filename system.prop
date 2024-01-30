@@ -159,3 +159,6 @@ arm64.memtag.process.system_server=off
 
 # Disable blur on app launch
 ro.launcher.blur.appLaunch=0
+
+# IMS
+persist.dbg.volte_avail_ovr=1
