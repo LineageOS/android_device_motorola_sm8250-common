@@ -42,9 +42,9 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
-# Alarm - from lmi-user 11 RKQ1.200826.002
-product/app/PowerOffAlarm/PowerOffAlarm.apk|5885c09b8446d8b0c1f665bd9522792d79201cd7
-vendor/bin/power_off_alarm|160bd6e3ae23b4aba3b73d5c1865074beac77e7c
+# Alarm - from missi:14/UKQ1.230917.001
+system_ext/app/PowerOffAlarm/PowerOffAlarm.apk|7bcc6b4400d3937968702f9b16d1ebdc05ca5ad9
+vendor/bin/power_off_alarm|d667ee01d263e211ecff5f9912662bba261e3d9d
 
 # Audio
 vendor/lib/libAndroidAlgSys.so
