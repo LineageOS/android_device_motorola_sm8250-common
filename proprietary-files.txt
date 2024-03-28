@@ -120,7 +120,7 @@ vendor/lib64/libsdsprpc.so
 vendor/lib64/libsysmon_cdsp_skel.so
 
 # CNE
-vendor/app/CneApp/CneApp.apk
+vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_symlink
 vendor/app/IWlanService/IWlanService.apk
 vendor/bin/cnd
 vendor/etc/cne/mwqem.conf
