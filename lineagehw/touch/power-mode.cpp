@@ -8,10 +8,13 @@
 #include "MMIGesture.h"
 
 namespace aidl {
-namespace android {
+namespace google {
 namespace hardware {
 namespace power {
 namespace impl {
+namespace pixel {
+
+using ::aidl::android::hardware::power::Mode;
 
 bool isDeviceSpecificModeSupported(Mode type, bool* _aidl_return) {
     if (type == Mode::DOUBLE_TAP_TO_WAKE) {
@@ -26,8 +29,9 @@ bool setDeviceSpecificMode(Mode type, bool enabled) {
     return mmi_gesture::SetEnabled(mmi_gesture::Gesture::kDoubleTap, enabled);
 }
 
+}  // namespace pixel
 }  // namespace impl
 }  // namespace power
 }  // namespace hardware
-}  // namespace android
+}  // namespace google
 }  // namespace aidl
