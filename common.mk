@@ -188,7 +188,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
+    libexif.vendor:64 \
     libgui_vendor \
+    libyuv.vendor:64 \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
 # Common init scripts
@@ -400,6 +402,11 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
 
 # QCOM
+PRODUCT_PACKAGES += \
+    libjsoncpp.vendor:64 \
+    libnetutils.vendor:64 \
+    libsqlite.vendor:64
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
     $(LOCAL_PATH)/configs/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist_system_ext.xml
@@ -414,6 +421,7 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
+    libsysutils.vendor \
     librmnetctl \
     libxml2
 
@@ -505,6 +513,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libavservices_minijail \
     libnl \
+    libpng.vendor \
     libwfdaac_vendor
 
 PRODUCT_BOOT_JARS += \
