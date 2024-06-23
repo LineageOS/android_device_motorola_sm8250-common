@@ -407,6 +407,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
     $(LOCAL_PATH)/configs/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist_system_ext.xml
 
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
+
 # RFS MDM MPSS symlinks
 PRODUCT_PACKAGES += \
     rfs_mdm_mpss_readonly_vendor_fsg_symlink
