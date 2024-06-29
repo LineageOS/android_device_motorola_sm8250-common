@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "28799cfd_907bfc80",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-06-29T16:14:54Z",
+      "side": 1,
+      "message": "Use this one instead: https://review.lineageos.org/c/LineageOS/android_device_motorola_sm6225-common/+/395809",
+      "revId": "a3a0c0efe875fb24db9f1591f4c1cf66205ef5c3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
