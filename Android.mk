@@ -104,7 +104,6 @@ $(RFS_MDM_MPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /mnt/vendor/persist/hlos_rfs/shared $@/hlos
 	$(hide) ln -sf /vendor/firmware_mnt $@/readonly/firmware
 	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
-	$(hide) ln -sf /vendor/fsg $@/readonly/vendor/fsg
 
 ALL_DEFAULT_INSTALLED_MODULES += $(RFS_MDM_MPSS_SYMLINKS)
 
