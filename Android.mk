@@ -55,13 +55,4 @@ $(SUPER_FSG_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MOUNT_POINT) $(BT_FIRMWARE_MOUNT_POINT) $(DSP_MOUNT_POINT) $(FSG_MOUNT_POINT) $(SUPER_MODEM_MOUNT_POINT) $(SUPER_FSG_MOUNT_POINT)
 
-AW882XX_CAL_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/aw_cali.bin
-$(AW882XX_CAL_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating aw882xx firmware symlinks: $@"
-	@rm -rf $@
-	@mkdir -p $(dir $@)
-	$(hide) ln -sf /mnt/vendor/persist/factory/audio/aw_cali.bin $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(AW882XX_CAL_SYMLINKS)
-
 endif
