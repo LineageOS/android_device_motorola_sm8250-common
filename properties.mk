@@ -433,10 +433,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # }}}
 
 # Media {{{
-PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.omx_default_rank=0
-
-#Vendor property to enable Codec2 for audio and OMX for Video
-PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.ccodec=1
 # }}}
 
 # Perf {{{
