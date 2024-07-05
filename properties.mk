@@ -432,13 +432,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.volume.metadata.method=dm-default-key
 # }}}
 
-# Media {{{
-PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.omx_default_rank=0
-
-#Vendor property to enable Codec2 for audio and OMX for Video
-PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.ccodec=1
-# }}}
-
 # Perf {{{
 #Property to enable/disable PASR
 PRODUCT_PROPERTY_OVERRIDES += vendor.power.pasr.enabled=true
