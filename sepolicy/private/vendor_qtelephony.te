@@ -1,2 +1,3 @@
 allow vendor_qtelephony mot_radio_service:service_manager find;
 allow vendor_qtelephony mot_system_service:service_manager find;
+allow vendor_qtelephony vendor_hal_telephony_service:service_manager find;

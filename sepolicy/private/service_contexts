@@ -1,2 +1,9 @@
 motoexttelephony                          u:object_r:mot_radio_service:s0
 moto_ext_telephony.registry               u:object_r:mot_system_service:s0
+
+vendor.qti.hardware.radio.am.IQcRilAudio/slot1                  u:object_r:vendor_hal_telephony_service:s0
+vendor.qti.hardware.radio.am.IQcRilAudio/slot2                  u:object_r:vendor_hal_telephony_service:s0
+vendor.qti.hardware.radio.ims.IImsRadio/imsradio0               u:object_r:vendor_hal_telephony_service:s0
+vendor.qti.hardware.radio.ims.IImsRadio/imsradio1               u:object_r:vendor_hal_telephony_service:s0
+vendor.qti.hardware.radio.qcrilhook.IQtiOemHook/oemhook0        u:object_r:vendor_hal_telephony_service:s0
+vendor.qti.hardware.radio.qcrilhook.IQtiOemHook/oemhook1        u:object_r:vendor_hal_telephony_service:s0
