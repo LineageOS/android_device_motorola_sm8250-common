@@ -124,6 +124,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>wifidisplaysessionimagetrack</instance>
         </interface>
     </hal>
+    <!--
     <hal format="hidl">
         <name>android.hardware.memtrack</name>
         <transport>hwbinder</transport>
@@ -133,6 +134,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    -->
     <!-- fingerprint hal: using remote service instead of Google's default service-->
     <hal format="hidl">
         <name>android.hardware.biometrics.fingerprint</name>
