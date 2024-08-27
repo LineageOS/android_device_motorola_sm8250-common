@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-# Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2020 The LineageOS Project
+# SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+# SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -44,7 +44,8 @@ while [ "${#}" -gt 0 ]; do
                 KANG="--kang"
                 ;;
         -s | --section )
-                SECTION="${2}"; shift
+                SECTION="${2}"
+                shift
                 CLEAN_VENDOR=false
                 ;;
         * )
@@ -66,25 +67,40 @@ function blob_fixup() {
 function blob_fixup_common() {
     case "${1}" in
         system_ext/lib64/libwfdnative.so)
-            ${PATCHELF} --remove-needed "android.hidl.base@1.0.so" "${2}"
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
             ;;
         system_ext/etc/permissions/moto-telephony.xml)
+            [ "$2" = "" ] && return 0
             sed -i "s#/system/#/system_ext/#" "${2}"
             ;;
         vendor/bin/thermal-engine | vendor/bin/rmt_storage | vendor/lib64/libril-qc-hal-qmi.so)
+            [ "$2" = "" ] && return 0
             sed -i 's/ro.mot.build.customerid/vendor.build.customerid/g' "${2}"
             ;;
         vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc)
+            [ "$2" = "" ] && return 0
             sed -i "/disabled/d" "${2}"
             ;;
         vendor/lib64/hw/camera.qcom.so | vendor/lib64/hw/com.qti.chi.override.so)
+            [ "$2" = "" ] && return 0
             sed -i "s/camera.mot.is.coming.cts/vendor.camera.coming.cts/g" "${2}"
             ;;
         vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
+            [ "$2" = "" ] && return 0
             hexdump -ve '1/1 "%.2X"' "${2}" | sed "s/130A0094/1F2003D5/g" | xxd -r -p > "${EXTRACT_TMP_DIR}/${1##*/}"
             mv "${EXTRACT_TMP_DIR}/${1##*/}" "${2}"
             ;;
+        *)
+            return 1
+            ;;
     esac
+
+    return 0
+}
+
+function blob_fixup_dry() {
+    blob_fixup "$1" ""
 }
 
 if [ -z "${ONLY_TARGET}" ]; then
