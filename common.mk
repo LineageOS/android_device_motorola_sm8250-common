@@ -357,6 +357,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_video.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml
 
+PRODUCT_COPY_FILES += \
+    hardware/qcom-caf/sm8250/media/conf_files/kona/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
+    hardware/qcom-caf/sm8250/media/conf_files/kona/system_properties.xml:$(TARGET_COPY_OUT_VENDOR)/etc/system_properties.xml
+
 # Moto hardware
 PRODUCT_PACKAGES += \
     MotoActions \
@@ -458,10 +462,6 @@ $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.
 # but we still need it for display services.
 PRODUCT_PACKAGES += \
     vndservicemanager
-
-# Seccomp policy
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
 
 # Sensors
 PRODUCT_PACKAGES += \
