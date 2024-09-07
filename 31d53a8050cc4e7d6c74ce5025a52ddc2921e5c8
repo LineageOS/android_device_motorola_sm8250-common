@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "86ff9a9a_05619959",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2024-09-07T15:41:41Z",
+      "side": 1,
+      "message": "sm8250 and doesn\u0027t have working c2?",
+      "revId": "31d53a8050cc4e7d6c74ce5025a52ddc2921e5c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
