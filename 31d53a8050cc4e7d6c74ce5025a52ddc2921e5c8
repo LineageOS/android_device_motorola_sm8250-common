@@ -16,6 +16,24 @@
       "message": "sm8250 and doesn\u0027t have working c2?",
       "revId": "31d53a8050cc4e7d6c74ce5025a52ddc2921e5c8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dae84501_229753c3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2024-09-07T15:43:48Z",
+      "side": 1,
+      "message": "not for qti (hardware) c2. the service lacks .rc so it was always a no-op",
+      "parentUuid": "86ff9a9a_05619959",
+      "revId": "31d53a8050cc4e7d6c74ce5025a52ddc2921e5c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
