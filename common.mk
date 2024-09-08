@@ -334,18 +334,12 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
-    libmm-omxcore \
-    libOmxCore \
-    libstagefrighthw \
-    libOmxVdec \
-    libOmxVenc \
-    libc2dcolorconvert
+    libcodec2_hidl@1.0.vendor \
+    libcodec2_vndk.vendor \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
-    $(LOCAL_PATH)/configs/media_codecs_kona.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_kona.xml \
-    $(LOCAL_PATH)/configs/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
-    $(LOCAL_PATH)/configs/media_codecs_performance_kona.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_kona.xml
+    $(LOCAL_PATH)/configs/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml
 
 # Moto hardware
 PRODUCT_PACKAGES += \
@@ -365,22 +359,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     Tag
-
-# OMX
-PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
-    libcodec2_hidl@1.0.vendor \
-    libcodec2_vndk.vendor \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxCore \
-    libOmxEvrcEnc \
-    libOmxG711Enc \
-    libOmxQcelp13Enc \
-    libOmxVdec \
-    libOmxVenc \
-    libOmxVidcCommon \
-    libstagefrighthw
 
 # Power
 PRODUCT_PACKAGES += \
@@ -448,10 +426,6 @@ $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.
 # but we still need it for display services.
 PRODUCT_PACKAGES += \
     vndservicemanager
-
-# Seccomp policy
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
 
 # Sensors
 PRODUCT_PACKAGES += \

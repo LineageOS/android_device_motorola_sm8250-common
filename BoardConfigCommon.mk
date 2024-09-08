@@ -164,6 +164,7 @@ DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_moto_kona
 
 # Media
+TARGET_SUPPORTS_OMX_SERVICE := false
 TARGET_USES_ION := true
 
 # Partitions

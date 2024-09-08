@@ -433,6 +433,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # }}}
 
 # Media {{{
+# Disable OMX
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.media.omx=0
 # }}}
 
 # Perf {{{
