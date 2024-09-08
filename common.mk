@@ -342,7 +342,9 @@ PRODUCT_PACKAGES += \
     libc2dcolorconvert
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
     $(LOCAL_PATH)/configs/media_codecs_kona.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_kona.xml \
+    $(LOCAL_PATH)/configs/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
     $(LOCAL_PATH)/configs/media_codecs_performance_kona.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_kona.xml \
     $(LOCAL_PATH)/configs/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml
 
@@ -408,7 +410,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # QCOM
 PRODUCT_PACKAGES += \
-    libjsoncpp.vendor:64 \
+    libjsoncpp.vendor \
     libnetutils.vendor:64 \
     libsqlite.vendor:64
 
