@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "56863d79_e2f45047",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-09-09T02:11:37Z",
+      "side": 1,
+      "message": "why tho?\n\nmakes it harder to pick stuff when everyone else has it all defined in target.\n\nplus inheritance order gets really weird really easily...",
+      "revId": "a70c71c4caf894c4a1846135e8fc0c011a27b765",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
