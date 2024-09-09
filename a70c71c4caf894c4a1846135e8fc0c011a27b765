@@ -16,6 +16,24 @@
       "message": "why tho?\n\nmakes it harder to pick stuff when everyone else has it all defined in target.\n\nplus inheritance order gets really weird really easily...",
       "revId": "a70c71c4caf894c4a1846135e8fc0c011a27b765",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "28584e00_1473770e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2024-09-09T02:23:54Z",
+      "side": 1,
+      "message": "cuz https://github.com/LineageOS/android_device_motorola_sm8250-common/commit/989f7428ce3b9b159d469dd34abd7c9298594db3#diff-1d53751ddf3ffeb25cfe609c6bd28746651e23ea81d51fe582b0f635f0896e0dR19\n\nI don\u0027t come up with better ideas...",
+      "parentUuid": "56863d79_e2f45047",
+      "revId": "a70c71c4caf894c4a1846135e8fc0c011a27b765",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
