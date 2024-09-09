@@ -522,7 +522,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>slot2</instance>
         </interface>
     </hal>
-    <!--
     <hal format="hidl">
         <name>vendor.qti.hardware.cacert</name>
         <transport>hwbinder</transport>
@@ -532,7 +531,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
-    -->
     <!-- Factory HAL service -->
     <!--
     <hal format="hidl">
