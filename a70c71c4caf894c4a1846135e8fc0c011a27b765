@@ -34,6 +34,24 @@
       "parentUuid": "56863d79_e2f45047",
       "revId": "a70c71c4caf894c4a1846135e8fc0c011a27b765",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b59adb42_096048d9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-09-09T17:32:22Z",
+      "side": 1,
+      "message": "why do we need that what https://review.lineageos.org/c/LineageOS/android_device_osom_ingot/+/400145 is what most people do?",
+      "parentUuid": "28584e00_1473770e",
+      "revId": "a70c71c4caf894c4a1846135e8fc0c011a27b765",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
