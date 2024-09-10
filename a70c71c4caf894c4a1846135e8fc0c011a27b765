@@ -106,6 +106,24 @@
       "parentUuid": "5c4d310c_a84e79c6",
       "revId": "a70c71c4caf894c4a1846135e8fc0c011a27b765",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc920d2d_2b150d8a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2024-09-10T08:52:06Z",
+      "side": 1,
+      "message": "sm8250 HAL still uses OMX HW audio, which afaik is still possible to use unlike OMX SW audio. By disabling OMX completely, you are disabling the OMX HW audio codecs. And from what I see only sm8450+ has c2 HW audio codecs",
+      "parentUuid": "2299d56e_b86833af",
+      "revId": "a70c71c4caf894c4a1846135e8fc0c011a27b765",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
