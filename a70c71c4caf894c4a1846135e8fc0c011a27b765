@@ -88,6 +88,24 @@
       "parentUuid": "05e09b65_f9a8d529",
       "revId": "a70c71c4caf894c4a1846135e8fc0c011a27b765",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2299d56e_b86833af",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2024-09-10T03:00:36Z",
+      "side": 1,
+      "message": "\u003e why do we need that what https://review.lineageos.org/c/LineageOS/android_device_osom_ingot/+/400145 is what most people do?\n\nvendor.media.omx\u003d0 disables loading omx plugins. TARGET_SUPPORTS_OMX_SERVICE :\u003d false additionally excludes building omx hidl.\n\n\u003e Only sm8450+ fully use c2, you aren\u0027t supposed to kill omx altogether on sm8250 (yet). You can reference FP4 tree that just has SW codecs removed.\n\nno no no it\u0027s not the case. omx video was removed since sm8350+ https://github.com/LineageOS/android_hardware_qcom_media/blob/lineage-21.0-caf-sm8350/mm-core/src/registry_table_android.c and only omx audio was kept. qcom uses debug.stagefright.omx_default_rank\u003d0 to rank omx audio lower than c2 audio (rank\u003d8), so it was \"c2.qti hw video + omx.qcom hw audio\" for sm8350+.\n\nAfter Idf55ec02c2c0f4d2fa73f949cffef0d820a54570, omx rank is reset to 0x100 so the combination becomes \"c2.qti hw video + c2.android sw audio\". omx fully becomes a no-op now.\n\nThe case for sm8250 is somewhat different because omx video is enabled in media hal. once we remove omx, we use the same \"c2.qti hw video + c2.android sw audio\" combination as sm8350+",
+      "parentUuid": "5c4d310c_a84e79c6",
+      "revId": "a70c71c4caf894c4a1846135e8fc0c011a27b765",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
