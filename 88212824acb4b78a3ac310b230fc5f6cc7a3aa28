@@ -16,6 +16,23 @@
       "message": "why do we need that",
       "revId": "88212824acb4b78a3ac310b230fc5f6cc7a3aa28",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e79d6300_177bc238",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-09-10T06:17:34Z",
+      "side": 1,
+      "message": "meh, do whatever. I\u0027m not going to dig in - but I\u0027d REALLY prefer we\u0027re not the _only_ or the _first_ sm8250 to do this.\n\nWith the BSOD\u0027s for a while, these users have been through enough pain ;p",
+      "revId": "88212824acb4b78a3ac310b230fc5f6cc7a3aa28",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
