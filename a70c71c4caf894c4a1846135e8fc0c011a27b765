@@ -142,6 +142,24 @@
       "parentUuid": "bc920d2d_2b150d8a",
       "revId": "a70c71c4caf894c4a1846135e8fc0c011a27b765",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2b74d6e_2688adf4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2024-09-13T07:40:30Z",
+      "side": 1,
+      "message": "After careful investigation, I realized that OMX HW AUDIO DOES NOT WORK WITHOUT QCOM AV ENHANCEMENTS.\n\nOMX.qcom.audio.* are not directly exposed to MediaPlayerService (and not present in dumpsys media.player), but selected by a hook in libavenhancements.so https://github.com/DD3Boh/proprietary_vendor_qcom_source/blob/39a7b549d3b361e17b41808bbc50a0ae61277406/commonsys/avenhancements/av/stagefright/ExtendedUtils.cpp#L478\n\nHence, it\u0027s pointless to keep OMX when we use c2 for video.",
+      "parentUuid": "d1c9acf8_c138f2bc",
+      "revId": "a70c71c4caf894c4a1846135e8fc0c011a27b765",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
