@@ -112,3 +112,11 @@ service vendor.ident-fps-overlay-sh /vendor/bin/init.oem.fingerprint.overlay.sh
 
 on post-fs-data
     exec_start vendor.ident-fps-overlay-sh
+
+# Tune Swap readahead on ufs 3.1
+# 0 when zram wb was disabled
+# 4 when zram wb was enabled, it should be fine tuned on each ufs/emmc.
+# Note: readahead will only be applied on writeback pages.
+on property:sys.boot_completed=1
+    write /proc/sys/vm/page-cluster 4
+    swapon_all /vendor/etc/fstab.qcom.zramwb
