@@ -507,9 +507,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.media.audio.common.types-V2-cpp \
     libavservices_minijail \
+    libgui_shim \
+    libinput_shim
     libnl \
     libpng.vendor \
-    libwfdaac_vendor
+    libwfdaac_vendor \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
