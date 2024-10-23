@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "12f0745d_5e1489eb",
+        "filename": "common.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 428,
+      "author": {
+        "id": 32591
+      },
+      "writtenOn": "2024-10-23T13:06:49Z",
+      "side": 1,
+      "message": "Why not ```android.hardware.usb-service.qti```\n\nhttps://github.com/LineageOS/android_vendor_qcom_opensource_usb/blob/775ce00ba7f5664f7e80d11ac318dc0d838366e1/hal/Android.bp#L12",
+      "range": {
+        "startLine": 428,
+        "startChar": 4,
+        "endLine": 428,
+        "endChar": 36
+      },
+      "revId": "26a3c5f3503d5b59200db8d6d3d0a0e9377fd365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
