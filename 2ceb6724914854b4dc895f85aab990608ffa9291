@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f86dbbf0_932e346f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-10-24T16:51:18Z",
+      "side": 1,
+      "message": "Plan to revisit later. Elfchecks are in progress.",
+      "revId": "2ceb6724914854b4dc895f85aab990608ffa9291",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
