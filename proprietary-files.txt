@@ -484,7 +484,7 @@ vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 
 # Radio
-etc/permissions/privapp-permissions-qti.xml
+system/etc/permissions/privapp-permissions-qti.xml
 product/app/uimgbaservice/uimgbaservice.apk
 product/etc/permissions/UimGba.xml
 product/etc/permissions/UimGbaManager.xml
@@ -627,8 +627,8 @@ vendor/radio/qcril_database/upgrade/8_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/9_version_qcrildb.sql
 
 # Radio - IMS (APK)
-etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-telephony.xml
-framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
+system/etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-telephony.xml
+system/framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
 
 # Radio - IMS (APK) - from patched source
 system_ext/priv-app/ims/ims.apk|62955364e05ad393b8cf7077c0a2941e16bf6d13
@@ -921,7 +921,7 @@ vendor/etc/wifi/aoa_cldb_falcon.bin
 vendor/etc/wifi/aoa_cldb_swl14.bin
 
 # WiFi Display (system) - from OnePlus8T - UKQ1.230924.001/1705669244088
-framework/WfdCommon.jar|a661c494d064b79a3f71579592411fada1ea232f
+system/framework/WfdCommon.jar|a661c494d064b79a3f71579592411fada1ea232f
 system_ext/bin/wfdservice|400d123df78c1ed2e9643ff3ddf5ee5748f954fe
 system_ext/etc/init/wfdservice.rc|907def8565d8f91f531ca7dfad880af05d540b0c
 system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml|10dcd4e58f0652d800d48ae5b76e4fab43fda214
