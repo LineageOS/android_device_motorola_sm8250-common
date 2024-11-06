@@ -1,4 +1,28 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7dc686af_89f70b9b",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 946,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2024-11-06T03:14:32Z",
+      "side": 1,
+      "message": "need someone to fix hash generation",
+      "range": {
+        "startLine": 944,
+        "startChar": 0,
+        "endLine": 946,
+        "endChar": 113
+      },
+      "revId": "064dabc958767351725442537d2d686a788c68d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ],
   "submitRequirementResults": []
 }
