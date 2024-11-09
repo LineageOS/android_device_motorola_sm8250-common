@@ -70,6 +70,30 @@
       },
       "revId": "064dabc958767351725442537d2d686a788c68d9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85dd0622_b7fa7691",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 946,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2024-11-09T07:55:01Z",
+      "side": 1,
+      "message": "thought it was a bug, thanks for the explanation",
+      "parentUuid": "adb5e231_c785358b",
+      "range": {
+        "startLine": 944,
+        "startChar": 0,
+        "endLine": 946,
+        "endChar": 113
+      },
+      "revId": "064dabc958767351725442537d2d686a788c68d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
