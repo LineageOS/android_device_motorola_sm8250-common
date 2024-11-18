@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8c80fd9b_5e9236c5",
+        "filename": "properties.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 438,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2024-11-18T17:11:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c8a02506_b579780d",
+      "revId": "ff8b9ca6518c43b1fff9234a2436b474532f43d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dfaf0046_3daae23e",
@@ -31,6 +49,24 @@
       "writtenOn": "2024-11-18T15:56:10Z",
       "side": 1,
       "message": "not in 22.0 HEAD of lmk repo",
+      "revId": "ff8b9ca6518c43b1fff9234a2436b474532f43d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "02a8f017_82c64216",
+        "filename": "properties.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 439,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2024-11-18T17:11:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dfaf0046_3daae23e",
       "revId": "ff8b9ca6518c43b1fff9234a2436b474532f43d9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -54,6 +90,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "75566332_3df9d9fe",
+        "filename": "properties.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 440,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2024-11-18T17:11:50Z",
+      "side": 1,
+      "message": "this commit imports stock settings, they should\u0027ve done more tests than us, and further tuning can be done in the future if necessary.\n\nbtw \"low-end\" devices in lmkd docs refers to those w/ ro.config.low_ram\u003dtrue",
+      "parentUuid": "67c7634d_ecbd5668",
+      "revId": "ff8b9ca6518c43b1fff9234a2436b474532f43d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "67d13b82_8307bc67",
         "filename": "properties.mk",
         "patchSetId": 1
@@ -65,6 +119,24 @@
       "writtenOn": "2024-11-18T15:56:10Z",
       "side": 1,
       "message": "another case of against the docs\n\n  - `ro.lmk.thrashing_limit`:    number of workingset refaults as a percentage of\n                                the file-backed pagecache size used as a threshold\n                                 to consider system thrashing its pagecache.\n                                 Default for low-RAM devices \u003d 30, for high-end\n                                 devices \u003d 100",
+      "revId": "ff8b9ca6518c43b1fff9234a2436b474532f43d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "47b384c8_503ec3b3",
+        "filename": "properties.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 442,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2024-11-18T17:11:50Z",
+      "side": 1,
+      "message": "ditto",
+      "parentUuid": "67d13b82_8307bc67",
       "revId": "ff8b9ca6518c43b1fff9234a2436b474532f43d9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -88,6 +160,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "19b78df2_cffd641d",
+        "filename": "properties.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 443,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2024-11-18T17:11:50Z",
+      "side": 1,
+      "message": "ditto",
+      "parentUuid": "4b6e7cb9_2af17b68",
+      "revId": "ff8b9ca6518c43b1fff9234a2436b474532f43d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9ab59cf2_6117f5c5",
         "filename": "properties.mk",
         "patchSetId": 1
@@ -99,6 +189,24 @@
       "writtenOn": "2024-11-18T15:56:10Z",
       "side": 1,
       "message": "not in 22.0 head",
+      "revId": "ff8b9ca6518c43b1fff9234a2436b474532f43d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3b76332_670a1b43",
+        "filename": "properties.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 444,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2024-11-18T17:11:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ab59cf2_6117f5c5",
       "revId": "ff8b9ca6518c43b1fff9234a2436b474532f43d9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -122,6 +230,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "46609414_c3a2cfc3",
+        "filename": "properties.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 445,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2024-11-18T17:11:50Z",
+      "side": 1,
+      "message": "ditto",
+      "parentUuid": "3eb74a7c_c21d0266",
+      "revId": "ff8b9ca6518c43b1fff9234a2436b474532f43d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1d0d892b_1d6274c8",
         "filename": "properties.mk",
         "patchSetId": 1
@@ -133,6 +259,24 @@
       "writtenOn": "2024-11-18T15:56:10Z",
       "side": 1,
       "message": "again, aggressive:   - `ro.lmk.psi_partial_stall_ms`: partial PSI stall threshold in milliseconds for\n                                 triggering low memory notification. Default for\n                                 low-RAM devices \u003d 200, for high-end devices \u003d 70",
+      "revId": "ff8b9ca6518c43b1fff9234a2436b474532f43d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d0b6619_1162c09e",
+        "filename": "properties.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 446,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2024-11-18T17:11:50Z",
+      "side": 1,
+      "message": "ditto",
+      "parentUuid": "1d0d892b_1d6274c8",
       "revId": "ff8b9ca6518c43b1fff9234a2436b474532f43d9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
