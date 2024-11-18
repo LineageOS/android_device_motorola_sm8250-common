@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c8a02506_b579780d",
+        "filename": "properties.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 438,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-11-18T15:56:10Z",
+      "side": 1,
+      "message": "default",
+      "revId": "ff8b9ca6518c43b1fff9234a2436b474532f43d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dfaf0046_3daae23e",
+        "filename": "properties.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 439,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-11-18T15:56:10Z",
+      "side": 1,
+      "message": "not in 22.0 HEAD of lmk repo",
+      "revId": "ff8b9ca6518c43b1fff9234a2436b474532f43d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67c7634d_ecbd5668",
+        "filename": "properties.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 440,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-11-18T15:56:10Z",
+      "side": 1,
+      "message": "- `ro.lmk.swap_free_low_percentage`: level of free swap as a percentage of the\n                                 total swap space used as a threshold to consider\n                                 the system as swap space starved. Default for\n                                 low-RAM devices \u003d 10, for high-end devices \u003d 20\n                                 \n                                 \n                                 So this should probably be 20?",
+      "revId": "ff8b9ca6518c43b1fff9234a2436b474532f43d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67d13b82_8307bc67",
+        "filename": "properties.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 442,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-11-18T15:56:10Z",
+      "side": 1,
+      "message": "another case of against the docs\n\n  - `ro.lmk.thrashing_limit`:    number of workingset refaults as a percentage of\n                                the file-backed pagecache size used as a threshold\n                                 to consider system thrashing its pagecache.\n                                 Default for low-RAM devices \u003d 30, for high-end\n                                 devices \u003d 100",
+      "revId": "ff8b9ca6518c43b1fff9234a2436b474532f43d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b6e7cb9_2af17b68",
+        "filename": "properties.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 443,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-11-18T15:56:10Z",
+      "side": 1,
+      "message": "- `ro.lmk.thrashing_limit_decay`: thrashing threshold decay expressed as a\n                                 percentage of the original threshold used to lower\n                                 the threshold when system does not recover even\n                                 after a kill. Default for low-RAM devices \u003d 50,\n                                 for high-end devices \u003d 10",
+      "revId": "ff8b9ca6518c43b1fff9234a2436b474532f43d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9ab59cf2_6117f5c5",
+        "filename": "properties.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 444,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-11-18T15:56:10Z",
+      "side": 1,
+      "message": "not in 22.0 head",
+      "revId": "ff8b9ca6518c43b1fff9234a2436b474532f43d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3eb74a7c_c21d0266",
+        "filename": "properties.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 445,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-11-18T15:56:10Z",
+      "side": 1,
+      "message": "this is... aggressive?\n\n  - `ro.lmk.psi_complete_stall_ms`: complete PSI stall threshold in milliseconds for\n                                 triggering critical memory notification. Default \u003d\n                                 700",
+      "revId": "ff8b9ca6518c43b1fff9234a2436b474532f43d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1d0d892b_1d6274c8",
+        "filename": "properties.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 446,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-11-18T15:56:10Z",
+      "side": 1,
+      "message": "again, aggressive:   - `ro.lmk.psi_partial_stall_ms`: partial PSI stall threshold in milliseconds for\n                                 triggering low memory notification. Default for\n                                 low-RAM devices \u003d 200, for high-end devices \u003d 70",
+      "revId": "ff8b9ca6518c43b1fff9234a2436b474532f43d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
