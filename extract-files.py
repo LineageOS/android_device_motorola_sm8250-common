@@ -60,7 +60,7 @@ blob_fixups: blob_fixups_user_type = {
         .remove_needed('android.hidl.base@1.0.so')
         .add_needed('libinput_shim.so'),
     'system_ext/lib/libwfdservice.so': blob_fixup()
-        .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V3-cpp.so'),
+        .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V4-cpp.so'),
     'system_ext/etc/permissions/moto-telephony.xml': blob_fixup()
         .regex_replace('system', 'system_ext'),
     ('vendor/bin/thermal-engine', 'vendor/bin/rmt_storage', 'vendor/lib64/libril-qc-hal-qmi.so'): blob_fixup()
