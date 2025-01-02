@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf394ba2_480ddd67",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-01-02T02:06:17Z",
+      "side": 0,
+      "message": "This is also unused",
+      "range": {
+        "startLine": 136,
+        "startChar": 0,
+        "endLine": 136,
+        "endChar": 34
+      },
+      "revId": "82e964b05bfe1f1034d5e72b6793849a388df253",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
