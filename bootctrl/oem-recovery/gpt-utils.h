@@ -80,7 +80,9 @@ extern "C" {
 #define AB_SLOT_B_SUFFIX                "_b"
 #define PTN_XBL                         "xbl"
 #define PTN_XBL_CFG                     "xbl_config"
-#define PTN_SWAP_LIST                   PTN_XBL, PTN_XBL_CFG, "sbl1", "rpm", "tz", "aboot", "abl", "hyp", "lksecapp", "keymaster", "cmnlib", "cmnlib32", "cmnlib64", "pmic", "apdp", "devcfg", "hosd", "keystore", "msadp", "mdtp", "mdtpsecapp", "dsp", "aop", "qupfw", "vbmeta", "dtbo", "imagefv", "ImageFv", "multiimgoem", "multiimgqti", "vm-bootsys", "shrm", "cpucp", "prov", "spss", "storsec", "uefisecapp", "vbmeta_system"
+#define PTN_MULTIIMGOEM                 "multiimgoem"
+#define PTN_MULTIIMGQTI                 "multiimgqti"
+#define PTN_SWAP_LIST                   PTN_XBL, PTN_XBL_CFG, PTN_MULTIIMGOEM, PTN_MULTIIMGQTI, "sbl1", "rpm", "tz", "aboot", "abl", "hyp", "lksecapp", "keymaster", "cmnlib", "cmnlib32", "cmnlib64", "pmic", "apdp", "devcfg", "hosd", "keystore", "msadp", "mdtp", "mdtpsecapp", "dsp", "aop", "qupfw", "vbmeta", "dtbo", "imagefv", "ImageFv", "vm-bootsys", "shrm", "cpucp", "uefi", "prov", "spss", "storsec", "aop_config", "uefisecapp", "featenabler", "vendor_boot", "recovery", "qweslicstore", "xbl_ramdump", "vbmeta_system"
 #define AB_PTN_LIST PTN_SWAP_LIST, "boot", "system", "vendor", "odm", "modem", "bluetooth", "vendor_boot", "mdm1m9kefs3", "logo", "fsg"
 #define BOOT_DEV_DIR    "/dev/block/bootdevice/by-name"
 
