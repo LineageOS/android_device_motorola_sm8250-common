@@ -16,6 +16,24 @@
       "message": "You only have vendor/lib64/vendor.qti.gnss@4.0-service.so",
       "revId": "5a7dcbfbb7349eff4724a688dccae6215bddef48",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "61244909_e6aad73f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2025-02-19T16:21:05Z",
+      "side": 1,
+      "message": "this it reworked in the BP conversion anyway.\n\nI could have just not picked this.",
+      "parentUuid": "1425d698_b3e948ae",
+      "revId": "5a7dcbfbb7349eff4724a688dccae6215bddef48",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
