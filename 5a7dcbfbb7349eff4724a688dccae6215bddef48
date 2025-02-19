@@ -34,6 +34,24 @@
       "parentUuid": "1425d698_b3e948ae",
       "revId": "5a7dcbfbb7349eff4724a688dccae6215bddef48",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71d2364f_276a8900",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-02-19T17:17:48Z",
+      "side": 1,
+      "message": "You still need to set the right LOC_HIDL_VERSION in Android.bp",
+      "parentUuid": "61244909_e6aad73f",
+      "revId": "5a7dcbfbb7349eff4724a688dccae6215bddef48",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
