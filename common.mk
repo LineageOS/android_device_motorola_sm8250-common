@@ -191,6 +191,8 @@ PRODUCT_PACKAGES += \
     android.hardware.authsecret@1.0.vendor
 
 # Boot control
+PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/bootctrl
+
 PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
     android.hardware.boot-service.qti.recovery
