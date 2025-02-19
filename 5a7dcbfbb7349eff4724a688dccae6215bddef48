@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1425d698_b3e948ae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-02-19T15:10:16Z",
+      "side": 1,
+      "message": "You only have vendor/lib64/vendor.qti.gnss@4.0-service.so",
+      "revId": "5a7dcbfbb7349eff4724a688dccae6215bddef48",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
