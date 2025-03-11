@@ -1,8 +1,5 @@
 # All unpinned blobs below are extracted from pstar T1RAA33.39-11-11
 
-# Current blobs with ELF checks disabled:
-# libmdmcutback depends on libqsap_sdk, which is a gnu makefile target
-
 # ADSP
 vendor/bin/adsprpcd
 vendor/etc/init/vendor.qti.adsprpc-service.rc
@@ -539,7 +536,7 @@ vendor/lib64/libconfigdb.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/liblog_vendor.so
 vendor/lib64/liblqe.so
-vendor/lib64/libmdmcutback.so;DISABLE_CHECKELF
+vendor/lib64/libmdmcutback.so
 vendor/lib64/libmdmimgload.so
 vendor/lib64/libmotext_inf.so
 vendor/lib64/libnetmgr.so

@@ -8,7 +8,6 @@ from extract_utils.fixups_blob import (
     blob_fixups_user_type,
 )
 from extract_utils.fixups_lib import (
-    lib_fixup_remove,
     lib_fixup_remove_arch_suffix,
     lib_fixup_vendorcompat,
     lib_fixups_user_type,
@@ -22,6 +21,7 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/motorola/sm8250-common',
+    'hardware/motorola',
     'hardware/qcom-caf/sm8250',
     'hardware/qcom-caf/wlan',
     'vendor/qcom/opensource/display',
@@ -35,10 +35,6 @@ libs_add_vendor_suffix = (
     'libmmosal',
     'vendor.qti.hardware.wifidisplaysession@1.0',
     'vendor.qti.imsrtpservice@3.0',
-)
-
-libs_remove = (
-    'libqsap_sdk',
 )
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
