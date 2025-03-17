@@ -1,30 +1,3 @@
-# Super modem mounting
-allow fsg_file self:filesystem associate;
-allow init fsg_file:dir mounton;
-allow init fsg_file:filesystem { getattr mount relabelfrom unmount };
-allow init firmware_file:filesystem unmount;
-
-# debugfs
-allow init debugfs_tracing_debug:dir mounton;
-
-# Allow init to access loop devices
-allow init loop_device:blk_file { create setattr unlink };
-allowxperm init loop_device:blk_file ioctl {
-  LOOP_GET_STATUS64
-  LOOP_GET_STATUS
-  LOOP_SET_STATUS64
-  LOOP_SET_STATUS
-  BLKFLSBUF
-};
-
-# Product persist
-allow init mnt_product_file:dir mounton;
-
-recovery_only(`
-  allow init self:capability sys_module;
-  allow init rootfs:system module_load;
-')
-
 # ZRAM
 allow init per_boot_file:file ioctl;
 allowxperm init per_boot_file:file ioctl { F2FS_IOC_SET_PIN_FILE };
