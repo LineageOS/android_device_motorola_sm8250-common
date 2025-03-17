@@ -1,10 +1,2 @@
-allow kernel block_device:dir search;
-
-allow kernel kernel:capability kill;
-allow kernel {
-	vendor_hw_block_device
-	vendor_utags_block_device
-}:blk_file rw_file_perms;
-
 # ZRAM
 allow kernel per_boot_file:file r_file_perms;
