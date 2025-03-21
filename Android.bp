@@ -33,17 +33,3 @@ install_symlink {
     installed_location: "firmware/aw_cali.bin",
     symlink_target: "/mnt/vendor/persist/factory/audio/aw_cali.bin",
 }
-
-install_symlink {
-    name: "vendor_super_fsg_mountpoint",
-    vendor: true,
-    installed_location: "super_fsg/.keep",
-    symlink_target: "/dev/null",
-}
-
-install_symlink {
-    name: "vendor_super_modem_mountpoint",
-    vendor: true,
-    installed_location: "super_modem/.keep",
-    symlink_target: "/dev/null",
-}
