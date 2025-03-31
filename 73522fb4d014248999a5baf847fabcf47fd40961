@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e1f20ae0_55cea0df",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-03-31T16:50:23Z",
+      "side": 0,
+      "message": "This is mdm, not msm like the other devices",
+      "range": {
+        "startLine": 24,
+        "startChar": 11,
+        "endLine": 24,
+        "endChar": 51
+      },
+      "revId": "73522fb4d014248999a5baf847fabcf47fd40961",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
