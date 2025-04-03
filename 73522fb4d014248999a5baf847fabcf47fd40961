@@ -22,6 +22,30 @@
       },
       "revId": "73522fb4d014248999a5baf847fabcf47fd40961",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1836c320_cc07b2ff",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 17257
+      },
+      "writtenOn": "2025-04-03T00:31:30Z",
+      "side": 0,
+      "message": "I added mdm target to hardware/motorola.",
+      "parentUuid": "e1f20ae0_55cea0df",
+      "range": {
+        "startLine": 24,
+        "startChar": 11,
+        "endLine": 24,
+        "endChar": 51
+      },
+      "revId": "73522fb4d014248999a5baf847fabcf47fd40961",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
