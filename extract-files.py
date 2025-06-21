@@ -56,6 +56,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbinder_shim.so')
         .add_needed('libinput_shim.so'),
     'system_ext/lib/libwfdservice.so': blob_fixup()
+        .add_needed('libaudioclient_shim.so')
         .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V4-cpp.so'),
     'system_ext/etc/permissions/moto-telephony.xml': blob_fixup()
         .regex_replace('system', 'system_ext'),
