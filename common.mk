@@ -384,8 +384,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client
 
-$(call soong_config_set,power_libperfmgr,mode_extension_lib,//$(LOCAL_PATH):libperfmgr-ext-moto_kona)
-
 # QCOM
 PRODUCT_PACKAGES += \
     libjsoncpp.vendor \
@@ -418,8 +416,7 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch-service.motorola \
-    vendor.lineage.touch-service.moto_kona
+    vendor.lineage.touch-service.motorola
 
 $(call soong_config_set, MOTOROLA_TOUCH, HIGH_TOUCH_POLLING_PATH, /sys/class/touchscreen/primary/interpolation)
 
