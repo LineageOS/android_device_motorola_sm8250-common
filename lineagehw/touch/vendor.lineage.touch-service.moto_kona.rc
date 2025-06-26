@@ -1,9 +1,0 @@
-on early-boot
-    chown system system /sys/class/touchscreen/primary/gesture
-    chown system system /sys/class/touchscreen/primary/gesture_mode_type
-    chown system system /sys/class/touchscreen/primary/interpolation
-
-service vendor.touch-hal.moto_kona /vendor/bin/hw/vendor.lineage.touch-service.moto_kona
-    class hal
-    user system
-    group system
