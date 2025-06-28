@@ -51,7 +51,6 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_VERSION := r530567
 TARGET_KERNEL_CONFIG := \
-    vendor/kona-perf_defconfig \
     vendor/ext_config/moto-kona.config
 TARGET_KERNEL_SOURCE := kernel/motorola/sm8250
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load))
