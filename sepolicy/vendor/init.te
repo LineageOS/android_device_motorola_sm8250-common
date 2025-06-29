@@ -1,3 +1,5 @@
 # ZRAM
 allow init per_boot_file:file ioctl;
 allowxperm init per_boot_file:file ioctl { F2FS_IOC_SET_PIN_FILE };
+
+dontaudit init debugfs_tracing_debug:dir mounton;
