@@ -29,6 +29,9 @@ genfscon sysfs /devices/platform/soc/1c10000.qcom,pcie/pci0002:00/0002:00:00.0/0
 genfscon sysfs /devices/platform/soc/1c10000.qcom,pcie/wakeup                   u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/5c00000.qcom,ssc/wakeup                    u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/884000.i2c/i2c-1/1-005a/wakeup             u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/884000.i2c/i2c-3/3-005a/wakeup             u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/888000.i2c/i2c-4/4-0065/power_supply/bq25960-standalone/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-0008/wakeup             u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/998000.qcom,qup_uart/wakeup                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/abb0000.qcom,cvpss/wakeup                  u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/ae90000.qcom,dp_display/wakeup             u:object_r:sysfs_wakeup:s0
@@ -39,3 +42,4 @@ genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.q
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/qcom_battery/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-08/c440000.qcom,spmi:qcom,pmxprairie@8:qcom,power-on@800/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,ipa_uc/wakeup                     u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:mmi_chrg_manager_qc3p/power_supply/mmi_chrg_manager_qc3p/wakeup u:object_r:sysfs_wakeup:s0
