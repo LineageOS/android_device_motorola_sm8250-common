@@ -16,6 +16,24 @@
       "message": "I hope you\u0027re not planning to merge this in 23.0.",
       "revId": "1b58c08c55a62bbff55adab206f6327a8cda6a2c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "568e1033_9ba6f684",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2025-06-29T01:25:35Z",
+      "side": 1,
+      "message": "Of course not. The dep it calls isn\u0027t even there - this is purely to try to get things booting at the moment.",
+      "parentUuid": "c9734304_a1347e20",
+      "revId": "1b58c08c55a62bbff55adab206f6327a8cda6a2c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
