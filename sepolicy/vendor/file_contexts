@@ -1,20 +1,23 @@
+# A/B Partitions
+/dev/block/platform/soc/1d84000\.ufshc/by-name/mdm1m9kefs3_[ab] u:object_r:vendor_efs_boot_dev:s0
+
 # Camera
-/(vendor|system/vendor)/bin/vl53l1_daemon               u:object_r:vl53l1_exec:s0
+/(vendor|system/vendor)/bin/vl53l1_daemon u:object_r:vl53l1_exec:s0
 
 # IFAA
-/(vendor|system/vendor)/bin/hw/vendor\.zui\.hardware\.ifaa@1\.0-service                 u:object_r:hal_ifaa_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.zui\.hardware\.ifaa@1\.0-service u:object_r:hal_ifaa_default_exec:s0
 
 # LiveDisplay
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.moto_kona     u:object_r:hal_lineage_livedisplay_qti_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.moto_kona u:object_r:hal_lineage_livedisplay_qti_exec:s0
 
-#poweropt-service
-/(vendor|system/vendor)/bin/poweropt-service            u:object_r:vendor_poweroptservice_exec:s0
+# NFC
+/vendor/bin/hw/android\.hardware\.secure_element@1\.2-service\.st u:object_r:hal_nfc_default_exec:s0
 
 # Touch
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.moto_kona           u:object_r:hal_lineage_touch_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.moto_kona u:object_r:hal_lineage_touch_default_exec:s0
 
 # Vendor init scripts
 /(vendor|system/vendor)/bin/init\.oem\.fingerprint\.overlay\.sh u:object_r:vendor_init_fingerprint_exec:s0
 
 # ZRAM
-/data/per_boot(/.*)?                                            u:object_r:per_boot_file:s0
+/data/per_boot(/.*)? u:object_r:per_boot_file:s0
