@@ -1,0 +1,2 @@
+allow vendor_init_fingerprint vendor_persist_fps_file:dir rw_dir_perms;
+allow vendor_init_fingerprint mnt_vendor_file:dir search;
