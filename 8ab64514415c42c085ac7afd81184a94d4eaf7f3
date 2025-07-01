@@ -22,6 +22,30 @@
       },
       "revId": "8ab64514415c42c085ac7afd81184a94d4eaf7f3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "818c997a_ec98bc99",
+        "filename": "common.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 387,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2025-07-01T03:43:25Z",
+      "side": 0,
+      "message": "No it is absolutely related. Look at the rest of the commit. power-mode is in touch HAL, which is what is built as the touch hal. it\u0027s screwy and I don\u0027t like it but it is tied together.",
+      "parentUuid": "156913e9_c0a1b861",
+      "range": {
+        "startLine": 387,
+        "startChar": 0,
+        "endLine": 387,
+        "endChar": 101
+      },
+      "revId": "8ab64514415c42c085ac7afd81184a94d4eaf7f3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
