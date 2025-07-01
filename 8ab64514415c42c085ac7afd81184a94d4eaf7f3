@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "156913e9_c0a1b861",
+        "filename": "common.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 387,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-07-01T01:25:24Z",
+      "side": 0,
+      "message": "unrelated",
+      "range": {
+        "startLine": 387,
+        "startChar": 0,
+        "endLine": 387,
+        "endChar": 101
+      },
+      "revId": "8ab64514415c42c085ac7afd81184a94d4eaf7f3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
