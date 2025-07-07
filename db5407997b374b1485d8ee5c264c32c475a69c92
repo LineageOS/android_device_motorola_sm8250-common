@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "059540b6_b3cfacd8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-07-07T10:49:18Z",
+      "side": 1,
+      "message": "Bypassing verification since it\u0027s a simple move to qcom sepolicy",
+      "revId": "db5407997b374b1485d8ee5c264c32c475a69c92",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
