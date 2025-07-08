@@ -405,6 +405,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
 # }}}
 
+# eBPF {{{
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.bpf.kver_override=5.10.239
+# }}}
+
 # FRP {{{
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/bootdevice/by-name/frp
