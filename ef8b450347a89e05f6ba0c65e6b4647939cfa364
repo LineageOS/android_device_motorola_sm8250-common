@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "65981409_769dfaee",
+        "filename": "common.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 442,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2025-07-09T18:10:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "77413c3f_bc2e7b2c",
+      "revId": "ef8b450347a89e05f6ba0c65e6b4647939cfa364",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d6317164_35edd9df",
@@ -31,6 +49,30 @@
       "writtenOn": "2025-07-09T11:45:30Z",
       "side": 1,
       "message": "Use TARGET_COPY_OUT_VENDOR?",
+      "range": {
+        "startLine": 445,
+        "startChar": 65,
+        "endLine": 445,
+        "endChar": 71
+      },
+      "revId": "ef8b450347a89e05f6ba0c65e6b4647939cfa364",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3c424ee_13a2ee63",
+        "filename": "common.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 445,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2025-07-09T18:10:20Z",
+      "side": 1,
+      "message": "yup, I just copied it from the makefile, fixed.",
+      "parentUuid": "d6317164_35edd9df",
       "range": {
         "startLine": 445,
         "startChar": 65,
