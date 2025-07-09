@@ -2,7 +2,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.moto_kona     u:object_r:hal_lineage_livedisplay_qti_exec:s0
 
 # Touch
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.moto_kona           u:object_r:hal_lineage_touch_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch-service\.moto_kona                u:object_r:hal_lineage_touch_default_exec:s0
 
 # ZRAM
 /data/per_boot(/.*)?                                            u:object_r:per_boot_file:s0

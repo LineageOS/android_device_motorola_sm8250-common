@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2022-2023 The LineageOS Project
- *
+ * SPDX-FileCopyrightText: 2022-2025 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -24,33 +23,31 @@ constexpr GestureInfo kGestureNodes[] = {
 };
 }  // anonymous namespace
 
+namespace aidl {
 namespace vendor {
 namespace lineage {
 namespace touch {
-namespace V1_0 {
-namespace implementation {
 
-using ::android::hardware::Void;
-
-Return<void> TouchscreenGesture::getSupportedGestures(getSupportedGestures_cb resultCb) {
+ndk::ScopedAStatus TouchscreenGesture::getSupportedGestures(std::vector<Gesture>* _aidl_return) {
     std::vector<Gesture> gestures;
     for (int32_t i = 0; i < std::size(kGestureNodes); ++i) {
         gestures.push_back({i, kGestureNodes[i].name, kGestureNodes[i].keycode});
     }
-    resultCb(gestures);
-    return Void();
+    *_aidl_return = gestures;
+    return ndk::ScopedAStatus::ok();
 }
 
-Return<bool> TouchscreenGesture::setGestureEnabled(
-        const ::vendor::lineage::touch::V1_0::Gesture& gesture, bool enabled) {
+ndk::ScopedAStatus TouchscreenGesture::setGestureEnabled(const Gesture& gesture, bool enabled) {
+    auto rc = ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
     if (gesture.id >= std::size(kGestureNodes)) {
-        return false;
+        return rc;
     }
-    return mmi_gesture::SetEnabled(kGestureNodes[gesture.id].gesture, enabled);
+    if (mmi_gesture::SetEnabled(kGestureNodes[gesture.id].gesture, enabled))
+        rc = ndk::ScopedAStatus::ok();
+    return rc;
 }
 
-}  // namespace implementation
-}  // namespace V1_0
 }  // namespace touch
 }  // namespace lineage
 }  // namespace vendor
+}  // namespace aidl
