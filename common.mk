@@ -438,7 +438,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
 
 # Vibrator
-$(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
+PRODUCT_PACKAGES += \
+      vendor.qti.hardware.vibrator.service
+
+PRODUCT_COPY_FILES += \
+      vendor/qcom/opensource/vibrator/excluded-input-devices.xml:vendor/etc/excluded-input-devices.xml
 
 # vndservicemanager has been removed from API30 devices (aosp/1235751)
 # but we still need it for display services.
