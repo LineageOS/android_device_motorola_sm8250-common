@@ -16,6 +16,29 @@
       "message": "Wrong spacing? below as well",
       "revId": "ef8b450347a89e05f6ba0c65e6b4647939cfa364",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d6317164_35edd9df",
+        "filename": "common.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 445,
+      "author": {
+        "id": 31890
+      },
+      "writtenOn": "2025-07-09T11:45:30Z",
+      "side": 1,
+      "message": "Use TARGET_COPY_OUT_VENDOR?",
+      "range": {
+        "startLine": 445,
+        "startChar": 65,
+        "endLine": 445,
+        "endChar": 71
+      },
+      "revId": "ef8b450347a89e05f6ba0c65e6b4647939cfa364",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
