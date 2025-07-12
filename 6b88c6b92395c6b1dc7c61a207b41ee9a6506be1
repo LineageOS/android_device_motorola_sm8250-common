@@ -51,6 +51,24 @@
       "message": "I asked other maintainers for this device, no objections, and it didn\u0027t even enable config_wifidisplay so we\u0027ve literally never even bothered to use it.",
       "revId": "6b88c6b92395c6b1dc7c61a207b41ee9a6506be1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d243d61_d6b4581d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2025-07-12T05:15:14Z",
+      "side": 1,
+      "message": "we had persist.debug.wfd.enable\u003d1 which plays the same role as the overlay",
+      "parentUuid": "308d3125_2ab0d0fb",
+      "revId": "6b88c6b92395c6b1dc7c61a207b41ee9a6506be1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
