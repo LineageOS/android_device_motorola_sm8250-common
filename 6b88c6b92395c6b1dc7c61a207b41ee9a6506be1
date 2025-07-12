@@ -34,6 +34,23 @@
       "parentUuid": "797059ba_e42c5132",
       "revId": "6b88c6b92395c6b1dc7c61a207b41ee9a6506be1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8475ab13_0e9267ed",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2025-07-12T01:22:44Z",
+      "side": 1,
+      "message": "I asked other maintainers for this device, no objections, and it didn\u0027t even enable config_wifidisplay so we\u0027ve literally never even bothered to use it.",
+      "revId": "6b88c6b92395c6b1dc7c61a207b41ee9a6506be1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
