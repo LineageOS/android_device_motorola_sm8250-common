@@ -416,6 +416,9 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
 
+PRODUCT_COPY_FILES += \
+    hardware/st/secure_element/libese-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libese-hal-st.conf
+
 # Touch
 PRODUCT_PACKAGES += \
     vendor.lineage.touch-service.motorola \
