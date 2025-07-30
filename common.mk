@@ -354,6 +354,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
     $(LOCAL_PATH)/configs/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/video_system_specs.json
 
+$(call soong_config_set,stagefright,target_disable_thumbnail_block_model,true)
+
 # Moto hardware
 PRODUCT_PACKAGES += \
     MotoActions \
