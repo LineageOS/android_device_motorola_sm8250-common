@@ -1,4 +1,28 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2424d24c_472f9a09",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-08-16T13:50:20Z",
+      "side": 1,
+      "message": "Dirty job done: https://review.lineageos.org/c/LineageOS/android_device_motorola_sm8550-common/+/442853",
+      "range": {
+        "startLine": 10,
+        "startChar": 2,
+        "endLine": 10,
+        "endChar": 46
+      },
+      "revId": "b4ea8d334363f7c4a6fa97a27d38b6123d453ca8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ],
   "submitRequirementResults": []
 }
