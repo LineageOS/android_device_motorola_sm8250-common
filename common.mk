@@ -338,7 +338,10 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.1-service.moto_kona
+    vendor.lineage.livedisplay-service.sdm \
+    vendor.lineage.livedisplay@2.1-service.motorola
+
+$(call soong_config_set,livedisplay_motorola,enable_ab,false)
 
 # Media
 PRODUCT_PACKAGES += \
