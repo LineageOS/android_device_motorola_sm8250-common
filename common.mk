@@ -338,7 +338,8 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.1-service.moto_kona
+    vendor.lineage.livedisplay-service.sdm \
+    vendor.lineage.livedisplay-service.motorola
 
 # Media
 PRODUCT_PACKAGES += \
