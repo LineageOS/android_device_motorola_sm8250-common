@@ -1,8 +1,3 @@
-# LiveDisplay
-genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/cabc          u:object_r:sysfs_livedisplay_tuneable:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/dc            u:object_r:sysfs_livedisplay_tuneable:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/hbm           u:object_r:sysfs_livedisplay_tuneable:s0
-
 # Sensors
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/panelName              u:object_r:vendor_sysfs_data:s0
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/panelRegDA             u:object_r:vendor_sysfs_data:s0
