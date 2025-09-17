@@ -354,7 +354,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.disable_offline_rotator=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.disable_client_composition_cache=1 \
     debug.sf.enable_gl_backpressure=1 \
     debug.sf.enable_advanced_sf_phase_offset=1 \
     debug.sf.high_fps_late_sf_phase_offset_ns=-4000000 \
