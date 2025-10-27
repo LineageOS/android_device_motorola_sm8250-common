@@ -102,6 +102,16 @@ on boot
    chown system system /sys/module/qpnp_adaptive_charge/parameters/lower_limit
    write /proc/sys/kernel/hung_task_timeout_secs 120
 
+    # Setup permission for powerHAL
+    chown system system /sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/io_percent
+    chown system system /sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/sample_ms
+    chown system system /sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/hyst_length
+    chown system system /sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/hyst_trigger_count
+    chown system system /sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/sample_ms
+    chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hist_memory
+    chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_length
+    chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_trigger_count
+
 #fps dual sensor
 service vendor.ident-fps-overlay-sh /vendor/bin/init.oem.fingerprint.overlay.sh
     class core
