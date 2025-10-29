@@ -338,7 +338,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.sf.color_mode=2 \
     persist.sys.sf.native_mode=1 \
     debug.sf.high_fps_late_app_phase_offset_ns=1000000 \
-    debug.mdpcomp.logs=0 \
     vendor.gralloc.disable_ubwc=0 \
     vendor.display.disable_scaler=0 \
     vendor.display.disable_excl_rect=0 \
