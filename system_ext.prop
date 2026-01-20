@@ -1,0 +1,5 @@
+# Display
+persist.demo.hdmirotationlock=false
+
+# DPM
+persist.vendor.dpm.feature=11
