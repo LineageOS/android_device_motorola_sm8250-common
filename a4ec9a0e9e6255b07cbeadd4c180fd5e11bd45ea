@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f463dd15_ba1a5a66",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-01-24T02:24:56Z",
+      "side": 1,
+      "message": "```\n[100% 157/157 0s remaining] Prebuilt:  (out/target/product/pstar/kernel)\n\n#### build completed successfully (05:24 (mm:ss)) ####\n```",
+      "revId": "a4ec9a0e9e6255b07cbeadd4c180fd5e11bd45ea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
