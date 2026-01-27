@@ -1,1 +1,0 @@
-dontaudit flags_health_check property_type:file { getattr open read map };
