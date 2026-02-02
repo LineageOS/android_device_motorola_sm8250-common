@@ -232,6 +232,9 @@ PRODUCT_COPY_FILES += \
 
 $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_moto_kona)
 
+# Dalvik
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+
 # Dependencies
 PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
