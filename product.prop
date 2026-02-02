@@ -5,7 +5,6 @@ audio.offload.min.duration.secs=30
 audio.offload.video=true
 audio.sys.mute.latency.factor=2
 audio.sys.noisy.broadcast.delay=500
-audio.sys.noisy.broadcast.delay=500
 audio.sys.offload.pstimeout.secs=3
 audio.sys.routing.latency=0
 media.stagefright.audio.deep=false
