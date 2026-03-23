@@ -28,41 +28,27 @@
     IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 -->
 <resources>
-   <!-- List of regexpressions describing the interface (if any) that represent tetherable
-          Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
-          should be empty.  An example would be "softap.*" -->
-   <string-array translatable="false" name="config_tether_wifi_regexs">
-       <item>"softap0"</item>
-       <item>"wigig0"</item>
-   </string-array>
+    <!-- Note: This config is deprecated, use BluetoothProperties instead.
+         Idle current for bluetooth controller. 0 by default
+    -->
+    <integer name="config_bluetooth_idle_cur_ma">6</integer>
 
-    <!-- Average Current for bluetooth controller when idle. 0 by default-->
-    <integer translatable="false" name="config_bluetooth_idle_cur_ma">6</integer>
+    <!-- Note: This config is deprecated, use BluetoothProperties instead.
+         Rx current for bluetooth controller. 0 by default
+    -->
+    <integer name="config_bluetooth_rx_cur_ma">28</integer>
 
-    <!-- Average Current for bluetooth controller when receiving. 0 by default-->
-    <integer translatable="false" name="config_bluetooth_rx_cur_ma">28</integer>
-
-    <!-- Average Current for bluetooth controller when transmitting. 0 by default-->
-    <integer translatable="false" name="config_bluetooth_tx_cur_ma">36</integer>
-
-    <!-- WPA3 sap mode is supported on this device. -->
-    <bool name="config_wifi_wap3_sap_mode_enabled">true</bool>
+    <!-- Note: This config is deprecated, use BluetoothProperties instead.
+         Tx current for bluetooth controller. 0 by default
+    -->
+    <integer name="config_bluetooth_tx_cur_ma">36</integer>
 
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
-    on the headphone/microphone jack. When false use the older uevent framework -->
+         on the headphone/microphone jack. When false use the older uevent framework. -->
     <bool name="config_useDevInputEventForAudioJack">true</bool>
 
-   <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
-       autodetected from the Configuration. -->
-   <bool name="config_showNavigationBar">true</bool>
-
-   <!-- Package names to use with vendor iwlan implementation. -->
-   <string name="config_wlan_data_service_package" translatable="false">vendor.qti.iwlan</string>
-   <string name="config_wlan_network_service_package" translatable="false">vendor.qti.iwlan</string>
-   <string name="config_qualified_networks_service_package" translatable="false">vendor.qti.iwlan</string>
-
-   <!-- Default list of files pinned by the Pinner Service -->
-   <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+    <!-- Default files to pin via Pinner Service -->
+    <string-array name="config_defaultPinnerServiceFiles" translatable="false">
         <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
         <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
         <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
@@ -76,6 +62,6 @@
         <item>"/vendor/lib64/libgsl.so"</item>
    </string-array>
 
-    <!-- Bytes that the PinnerService will pin for Home app -->
+    <!-- Default: 60 MB. Bytes that the PinnerService will pin for Home app -->
     <integer name="config_pinnerHomePinBytes">6291456</integer>
 </resources>
