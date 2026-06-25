@@ -1,2 +1,0 @@
-# ZRAM
-allow kernel per_boot_file:file r_file_perms;

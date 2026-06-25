@@ -1,5 +1,2 @@
 # Touch
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch-service\.moto_kona                u:object_r:hal_lineage_touch_default_exec:s0
-
-# ZRAM
-/data/per_boot(/.*)?                                            u:object_r:per_boot_file:s0
