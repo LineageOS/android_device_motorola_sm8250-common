@@ -12,9 +12,6 @@ persist.vendor.btstack.aac_frm_ctl.enabled=true
 # Camera
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam
 
-# Charger
-ro.charger.enable_suspend=1
-
 # Coresight
 persist.debug.coresight.config=stm-events
 
