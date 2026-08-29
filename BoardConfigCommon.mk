@@ -83,7 +83,6 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG := \
     vendor/kona-perf_defconfig \
     vendor/ext_config/moto-kona.config
-TARGET_KERNEL_NO_GCC := true
 TARGET_KERNEL_SOURCE := kernel/motorola/sm8250
 
 # Kernel Modules
