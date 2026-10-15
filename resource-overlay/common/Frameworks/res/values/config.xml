@@ -160,11 +160,13 @@
          -->
     <integer name="config_multiuserMaximumUsers">4</integer>
 
-    <!-- Whether UI for multi user should be shown.
+    <!-- Whether this device supports multiple switchable users.
+         Note that, even if false, multiple users such as profiles can still be supported since
+         they are not switchable.
          Note: If true, it is expected that secondary users are supported on the device (at least
          for testing purposes, even if in practice the UI really only allows other switchable
          types, such as restricted profiles or guests, to be created).
-         @deprecated  Use config_multiuserMaximumUsers instead.
+         @deprecated  Rely on config_multiuserMaximumUsers instead. For now, OEMs must set both.
          This config will likely be removed in the future; config_multiuserMaximumUsers, which now
          only applies to full users, not profiles, should be updated accordingly as needed.
          TODO(b/435521983): Remove this since it's now made redundant by config_multiuserMaximumUsers
