@@ -466,7 +466,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Telephony
 PRODUCT_PACKAGES += \
-    MotoNrEnabler \
+    MotoExtTelephony \
     ims-ext-common \
     ims_ext_common.xml \
     qti-telephony-hidl-wrapper \
